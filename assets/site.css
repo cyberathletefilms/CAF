@@ -153,7 +153,7 @@ button{
   position:absolute;
   inset:0;
   background:
-    url('images/car.jpg')
+    url('images/CAR.jpg')
     center 42%/cover no-repeat;
   transform:scale(1.035);
   animation:heroDrift 14s ease-out both;
