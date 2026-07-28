@@ -3713,13 +3713,17 @@ button.work-image{
 
 
 .story-ladies img{
-  /*
-    Show the entire photograph.
-    Do not crop this one.
-  */
+  width:100%;
+  height:100%;
 
-  object-fit:contain;
-  object-position:center center;
+  /* Fill the frame instead of showing the entire original */
+  object-fit:cover;
+
+  /* Favor the people and reduce ceiling */
+  object-position:center 70%;
+
+  /* Slight zoom */
+  transform:scale(1.12);
 }
 
 
