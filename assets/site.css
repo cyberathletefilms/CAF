@@ -3080,3 +3080,8 @@ footer{
 .bbq-card .experience-meta{
   padding-right:155px;
 }
+
+/* YouTube — preserve original red + white logo */
+.youtube-logo{
+  filter:none !important;
+}
