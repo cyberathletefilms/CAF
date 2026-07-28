@@ -3141,7 +3141,7 @@ footer{
 }
 
 /* ==========================================
-   CAF HEADER — FINAL LOGO + BRAND
+   CAF HEADER LOGO — CLEAN FINAL VERSION
    ========================================== */
 
 .brand{
@@ -3153,24 +3153,17 @@ footer{
   text-decoration:none;
 }
 
-/* CAF logo */
 .brand .caf-logo{
   display:block;
 
-  width:52px;
-  height:36px;
+  width:58px;
+  height:auto;
 
-  /* Keeps the rectangular white badge */
-  background:#fff;
+  object-fit:contain;
 
-  /* Fills the badge without stretching */
-  object-fit:cover;
-  object-position:center;
-
-  padding:0;
   margin:0;
+  padding:0;
 
-  /* Remove all previous logo effects */
   transform:none !important;
   filter:none !important;
   mix-blend-mode:normal !important;
@@ -3182,40 +3175,27 @@ footer{
   border:0;
   border-radius:0;
 
-  flex:0 0 52px;
+  flex-shrink:0;
 }
 
-/* Cyber Athlete Films text */
 .brand small{
-  display:block;
-
   margin:0;
 
   color:#fff;
 
-  font-family:'DM Sans',sans-serif;
   font-size:.78rem;
   font-weight:600;
-
   line-height:1;
-  letter-spacing:.055em;
 
+  letter-spacing:.055em;
   white-space:nowrap;
 }
 
 
-/* MOBILE */
-
 @media(max-width:820px){
 
-  .brand{
-    gap:9px;
-  }
-
   .brand .caf-logo{
-    width:48px;
-    height:33px;
-    flex-basis:48px;
+    width:52px;
   }
 
   .brand small{
