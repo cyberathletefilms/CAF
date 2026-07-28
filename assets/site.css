@@ -3085,3 +3085,15 @@ footer{
 .youtube-logo{
   filter:none !important;
 }
+
+/* BBQ HIGH — optical centering */
+
+.bbq-card .bbq-logo img{
+  position:relative;
+  left:6%;
+  margin:0 auto;
+  width:auto;
+  max-width:330px;
+  height:100%;
+  object-fit:contain;
+}
