@@ -3205,3 +3205,26 @@ footer{
     display: none;
   }
 }
+
+/* CAF HEADER LOGO — CIRCLE */
+
+.brand img {
+  width: 56px !important;
+  height: 56px !important;
+
+  object-fit: contain !important;
+
+  background: #fff !important;
+  padding: 5px !important;
+
+  border-radius: 50% !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  filter: none !important;
+  transform: none !important;
+
+  flex-shrink: 0;
+}
