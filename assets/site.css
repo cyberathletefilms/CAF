@@ -3149,7 +3149,9 @@ footer{
   height:48px;
 
   object-fit:cover;
-  object-position:center;
+
+  /* Nudge CAF mark right + down */
+  object-position:54% 55%;
 
   padding:0;
   margin:0;
