@@ -3043,3 +3043,40 @@ footer{
   }
 
 }
+
+/* BBQ HIGH — CENTER ART + EMMY BADGE BOTTOM RIGHT */
+
+.bbq-card .show-art{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.bbq-card .bbq-logo img{
+  display:block;
+  width:auto;
+  max-width:330px;
+  height:100%;
+  margin:0 auto;
+  object-fit:contain;
+  object-position:center center;
+}
+
+/* Emmy badge */
+.bbq-card .emmy-badge{
+  top:auto;
+  left:auto;
+  right:24px;
+  bottom:24px;
+  z-index:5;
+
+  background:#11110f;
+  border:1px solid var(--gold);
+  color:var(--gold);
+}
+
+/* Leave space for the badge beside the Producer info */
+.bbq-card .experience-meta{
+  padding-right:155px;
+}
