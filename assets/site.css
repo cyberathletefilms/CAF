@@ -3140,87 +3140,38 @@ footer{
   text-align:right;
 }
 
-/* ======================================
-   CAF HEADER BRAND REFINEMENT
-   ====================================== */
+/* ==========================================
+   CAF HEADER — FINAL LOGO + BRAND
+   ========================================== */
 
 .brand{
   display:flex;
   align-items:center;
-  gap:11px;
-}
-
-.brand .caf-logo{
-  display:block;
-
-  width:46px;
-  height:32px;
-
-  object-fit:cover;
-  object-position:center;
-
-  flex-shrink:0;
-
-  border-radius:1px;
-}
-
-.brand small{
-  display:block;
+  gap:12px;
 
   color:#fff;
-
-  font-size:.76rem;
-  font-weight:600;
-
-  letter-spacing:.055em;
-  white-space:nowrap;
+  text-decoration:none;
 }
 
-/* CAF LOGO — KEEP ORIGINAL IMAGE + WHITE BACKGROUND */
-
+/* CAF logo */
 .brand .caf-logo{
   display:block;
 
   width:52px;
-  height:auto;
+  height:36px;
 
-  object-fit:contain;
+  /* Keeps the rectangular white badge */
+  background:#fff;
 
-  /* cancel previous logo processing */
-  filter:none !important;
-  mix-blend-mode:normal !important;
-  opacity:1 !important;
-  clip-path:none !important;
-  mask:none !important;
-  -webkit-mask:none !important;
-
-  /* keep the white rectangular badge */
-  background:#fff !important;
-  padding:3px;
-  border-radius:0;
-}
-
-/* FINAL CAF HEADER LOGO */
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
-
-.brand .caf-logo{
-  display:block;
-
-  width:64px;
-  height:44px;
-
+  /* Fills the badge without stretching */
   object-fit:cover;
   object-position:center;
 
-  /* enlarge the red symbols */
-  transform:scale(1.45);
+  padding:0;
+  margin:0;
 
-  /* preserve original red + white appearance */
+  /* Remove all previous logo effects */
+  transform:none !important;
   filter:none !important;
   mix-blend-mode:normal !important;
   opacity:1 !important;
@@ -3228,7 +3179,47 @@ footer{
   mask:none !important;
   -webkit-mask:none !important;
 
-  background:#fff !important;
-  padding:0;
+  border:0;
   border-radius:0;
+
+  flex:0 0 52px;
+}
+
+/* Cyber Athlete Films text */
+.brand small{
+  display:block;
+
+  margin:0;
+
+  color:#fff;
+
+  font-family:'DM Sans',sans-serif;
+  font-size:.78rem;
+  font-weight:600;
+
+  line-height:1;
+  letter-spacing:.055em;
+
+  white-space:nowrap;
+}
+
+
+/* MOBILE */
+
+@media(max-width:820px){
+
+  .brand{
+    gap:9px;
+  }
+
+  .brand .caf-logo{
+    width:48px;
+    height:33px;
+    flex-basis:48px;
+  }
+
+  .brand small{
+    display:none;
+  }
+
 }
