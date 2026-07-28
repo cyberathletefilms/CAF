@@ -3487,36 +3487,54 @@ button.work-image{
 
 
 /* ==========================================
-   COLLAGE GRID
+   BEHIND THE STORY — PRODUCTION WALL
    ========================================== */
 
-.story-collage-grid{
+.story-wall{
+  position:relative;
+
+  height:1000px;
+  min-height:850px;
+
+  overflow:hidden;
+
+  background:#0a0a09;
+  color:#fff;
+
+  isolation:isolate;
+}
+
+
+/* ==========================================
+   COLLAGE CANVAS
+   ========================================== */
+
+.story-wall-stage{
   position:absolute;
   inset:0;
 
-  display:grid;
-
-  grid-template-columns:
-    1.05fr 1fr 1fr 1.15fr 1.15fr;
-
-  grid-template-rows:
-    1.15fr 1fr 1fr;
-
-  gap:3px;
-
-  background:#090908;
+  z-index:0;
 }
 
 
-.story-image{
-  position:relative;
+/* individual photo "prints" */
+
+.story-card{
+  position:absolute;
+
   overflow:hidden;
 
   background:#111;
+
+  box-shadow:
+    0 24px 65px rgba(0,0,0,.42);
+
+  border:
+    1px solid rgba(255,255,255,.08);
 }
 
 
-.story-image img{
+.story-card img{
   display:block;
 
   width:100%;
@@ -3524,179 +3542,246 @@ button.work-image{
 
   object-fit:cover;
 
-  transform:scale(1.01);
-
   filter:
     saturate(.92)
-    contrast(1.03);
+    contrast(1.04);
 }
 
 
 /* ==========================================
-   01 — NIGHT SHOOT
-   HERO IMAGE
+   NIGHT SHOOT
+   PRIMARY HERO
    ========================================== */
 
 .story-night{
-  grid-column:3 / 6;
-  grid-row:1 / 3;
+  width:54%;
+  height:43%;
+
+  right:-2%;
+  top:4%;
+
+  transform:rotate(1.4deg);
+
+  z-index:3;
 }
 
 .story-night img{
-  object-position:center 48%;
+  /*
+    Preserve the cowboy-hat figure
+    on the left side of the photo.
+  */
+  object-position:38% center;
 }
 
 
 /* ==========================================
-   02 — DIRECTING THE LADIES
+   DIRECTING LADIES
+   FULL IMAGE / NO CROP
    ========================================== */
 
 .story-directing{
-  grid-column:1 / 3;
-  grid-row:2;
+  width:39%;
+  height:42%;
+
+  left:4%;
+  bottom:4%;
+
+  transform:rotate(-2deg);
+
+  z-index:5;
+
+  background:#151514;
 }
 
 .story-directing img{
-  object-position:center 45%;
+  /*
+    Show the full frame.
+    No important people sacrificed.
+  */
+  object-fit:contain;
+  object-position:center;
 }
 
 
 /* ==========================================
-   03 — JAMAICA
-   ========================================== */
-
-.story-jamaica{
-  grid-column:1 / 2;
-  grid-row:3;
-}
-
-.story-jamaica img{
-  object-position:center center;
-}
-
-
-/* ==========================================
-   04 — HORSES
+   HORSES
+   WIDE LANDSCAPE
    ========================================== */
 
 .story-horses{
-  grid-column:2 / 3;
-  grid-row:3;
+  width:43%;
+  height:29%;
+
+  right:4%;
+  bottom:3%;
+
+  transform:rotate(-1.4deg);
+
+  z-index:4;
 }
 
 .story-horses img{
-  object-position:center center;
+  /*
+    Preserve far-right cowboy-hat figure.
+  */
+  object-position:63% center;
 }
 
 
 /* ==========================================
-   05 — DWTS / CHAKA
+   JAMAICA
+   ========================================== */
+
+.story-jamaica{
+  width:25%;
+  height:29%;
+
+  left:43%;
+  top:47%;
+
+  transform:rotate(2.5deg);
+
+  z-index:6;
+}
+
+.story-jamaica img{
+  object-position:center;
+}
+
+
+/* ==========================================
+   DWTS / CHAKA
    ========================================== */
 
 .story-dwts{
-  grid-column:3 / 4;
-  grid-row:3;
+  width:25%;
+  height:27%;
+
+  left:17%;
+  top:9%;
+
+  transform:rotate(-3deg);
+
+  z-index:4;
 }
 
 .story-dwts img{
-  object-position:center center;
+  object-position:center;
 }
 
 
 /* ==========================================
-   06 — MONSTER GARAGE
+   MONSTER GARAGE
    ========================================== */
 
 .story-monster{
-  grid-column:4 / 5;
-  grid-row:3;
+  width:24%;
+  height:30%;
+
+  right:25%;
+  top:37%;
+
+  transform:rotate(3deg);
+
+  z-index:7;
 }
 
 .story-monster img{
-  object-position:center center;
+  object-position:center;
 }
 
 
 /* ==========================================
-   07 — VIDEO VILLAGE
+   VIDEO VILLAGE
+   TIGHTER CROP — REMOVE DEAD TOP SPACE
    ========================================== */
 
 .story-village{
-  grid-column:5 / 6;
-  grid-row:3;
+  width:29%;
+  height:27%;
+
+  right:3%;
+  top:43%;
+
+  transform:rotate(-2.5deg);
+
+  z-index:6;
 }
 
 .story-village img{
-  object-position:center 52%;
+  /*
+    Zoom and push framing downward so
+    the monitors + people dominate.
+  */
+  object-fit:cover;
+
+  object-position:center 72%;
+
+  transform:scale(1.22);
 }
 
 
 /* ==========================================
-   08 — NYLE
-   Lives beneath copy / shadow
+   NYLE
+   SHOW THE FAR LEFT
    ========================================== */
 
 .story-nyle{
-  grid-column:1 / 2;
-  grid-row:1;
+  width:25%;
+  height:23%;
+
+  left:-1%;
+  top:38%;
+
+  transform:rotate(2deg);
+
+  z-index:2;
 }
 
 .story-nyle img{
-  object-position:18% center;
+  /*
+    This needs the whole left side visible.
+    You're kneeling at the extreme left.
+  */
+  object-fit:cover;
+  object-position:left center;
 
   filter:
-    saturate(.68)
-    contrast(1.06)
+    saturate(.72)
+    contrast(1.04)
     brightness(.82);
 }
 
 
 /* ==========================================
-   09 — WINTER
-   Also behind copy region
+   COPY-SIDE SHADE
    ========================================== */
 
-.story-winter{
-  grid-column:2 / 3;
-  grid-row:1;
-}
-
-.story-winter img{
-  object-position:center 35%;
-}
-
-
-/* ==========================================
-   COPY-SIDE SHADING
-
-   Intentionally concentrated upper-left.
-   Night shoot stays comparatively clean.
-   ========================================== */
-
-.story-collage-shade{
+.story-wall-shade{
   position:absolute;
-  z-index:2;
 
   inset:0;
+
+  z-index:8;
 
   pointer-events:none;
 
   background:
 
-    linear-gradient(
-      90deg,
+    radial-gradient(
+      circle at 12% 14%,
       rgba(5,5,4,.92) 0%,
-      rgba(5,5,4,.84) 18%,
-      rgba(5,5,4,.58) 34%,
-      rgba(5,5,4,.16) 52%,
-      rgba(5,5,4,.05) 100%
+      rgba(5,5,4,.80) 16%,
+      rgba(5,5,4,.48) 30%,
+      rgba(5,5,4,.12) 48%,
+      transparent 63%
     ),
 
     linear-gradient(
       180deg,
-      rgba(5,5,4,.42) 0%,
-      rgba(5,5,4,.12) 48%,
-      rgba(5,5,4,.34) 100%
+      rgba(5,5,4,.18) 0%,
+      transparent 48%,
+      rgba(5,5,4,.22) 100%
     );
 }
 
@@ -3705,180 +3790,177 @@ button.work-image{
    COPY — TOP LEFT
    ========================================== */
 
-.story-collage-copy{
+.story-wall-copy{
   position:absolute;
-  z-index:3;
 
-  top:clamp(120px, 15vh, 175px);
+  z-index:10;
+
+  top:90px;
   left:6vw;
 
-  width:min(590px, 38vw);
+  width:min(560px, 38vw);
 }
 
 
-.story-collage-copy .eyebrow{
-  margin:0 0 20px;
+.story-wall-copy .eyebrow{
+  margin:0 0 18px;
 
-  color:rgba(255,255,255,.72);
+  color:rgba(255,255,255,.70);
 }
 
 
-.story-collage-copy h2{
+.story-wall-copy h2{
   margin:0;
 
   font-family:Manrope,sans-serif;
 
   font-size:
-    clamp(4rem, 6.5vw, 7.5rem);
+    clamp(4rem, 6.2vw, 7.2rem);
 
   font-weight:700;
 
   line-height:.88;
 
   letter-spacing:-.065em;
-
-  color:#fff;
 }
 
 
 .story-environments{
-  max-width:520px;
+  margin:28px 0 0;
 
-  margin:30px 0 0;
-
-  font-size:
-    clamp(1rem, 1.2vw, 1.2rem);
-
-  line-height:1.55;
+  max-width:500px;
 
   color:rgba(255,255,255,.78);
+
+  font-size:
+    clamp(1rem,1.2vw,1.18rem);
+
+  line-height:1.55;
 }
 
 
 .story-message{
-  max-width:520px;
-
   margin:14px 0 0;
 
+  max-width:500px;
+
+  color:#fff;
+
   font-size:
-    clamp(1rem, 1.2vw, 1.2rem);
+    clamp(1rem,1.2vw,1.18rem);
 
   line-height:1.55;
 
   font-weight:600;
-
-  color:#fff;
 }
 
 
 /* ==========================================
-   SUBTLE IMAGE MOVEMENT
+   HOVER — VERY SUBTLE
    ========================================== */
 
-.story-image img{
+.story-card{
   transition:
-    transform 1.2s ease,
-    filter 1.2s ease;
+    transform .8s ease,
+    box-shadow .8s ease;
 }
 
-
-.story-collage:hover .story-image img{
-  transform:scale(1.025);
+.story-card:hover{
+  box-shadow:
+    0 32px 90px rgba(0,0,0,.55);
 }
 
 
 /* ==========================================
    MOBILE
+   More structured so it doesn't become chaos
    ========================================== */
 
 @media(max-width:820px){
 
-  .story-collage{
+  .story-wall{
+    min-height:1250px;
     height:auto;
-
-    min-height:1100px;
-    max-height:none;
   }
 
 
-  .story-collage-grid{
-    grid-template-columns:
-      repeat(2, 1fr);
+  .story-wall-stage{
+    position:absolute;
+    inset:0;
+  }
 
-    grid-template-rows:
-      repeat(5, 220px);
+
+  .story-card{
+    transform:none;
   }
 
 
   .story-night{
-    grid-column:1 / 3;
-    grid-row:1 / 3;
+    width:92%;
+    height:300px;
+
+    left:4%;
+    right:auto;
+    top:300px;
   }
 
 
   .story-directing{
-    grid-column:1;
-    grid-row:3;
-  }
+    width:72%;
+    height:270px;
 
-
-  .story-jamaica{
-    grid-column:2;
-    grid-row:3;
+    left:5%;
+    bottom:auto;
+    top:620px;
   }
 
 
   .story-horses{
-    grid-column:1;
-    grid-row:4;
+    width:76%;
+    height:240px;
+
+    right:4%;
+    bottom:auto;
+    top:920px;
+  }
+
+
+  .story-jamaica{
+    width:42%;
+    height:220px;
+
+    left:auto;
+    right:3%;
+    top:580px;
   }
 
 
   .story-dwts{
-    grid-column:2;
-    grid-row:4;
+    width:36%;
+    height:180px;
+
+    left:2%;
+    top:1060px;
   }
 
 
   .story-monster{
-    grid-column:1;
-    grid-row:5;
+    width:36%;
+    height:190px;
+
+    right:2%;
+    top:1040px;
   }
 
 
-  .story-village{
-    grid-column:2;
-    grid-row:5;
-  }
-
-
-  /*
-    Nyle + winter disappear on small screens.
-    Seven strong images are enough on mobile,
-    and this keeps the section from becoming huge.
-  */
-
-  .story-nyle,
-  .story-winter{
+  .story-village,
+  .story-nyle{
     display:none;
   }
 
 
-  .story-collage-shade{
-    background:
-
-      linear-gradient(
-        180deg,
-        rgba(5,5,4,.82) 0%,
-        rgba(5,5,4,.50) 30%,
-        rgba(5,5,4,.12) 58%,
-        rgba(5,5,4,.30) 100%
-      );
-  }
-
-
-  .story-collage-copy{
-    top:70px;
+  .story-wall-copy{
+    top:54px;
     left:24px;
     right:24px;
 
@@ -3886,25 +3968,22 @@ button.work-image{
   }
 
 
-  .story-collage-copy h2{
+  .story-wall-copy h2{
     font-size:
-      clamp(3.8rem, 16vw, 5.5rem);
+      clamp(3.8rem,16vw,5.5rem);
   }
 
 
-  .story-environments{
-    max-width:430px;
+  .story-wall-shade{
+    background:
 
-    margin-top:22px;
-
-    font-size:.95rem;
-  }
-
-
-  .story-message{
-    max-width:430px;
-
-    font-size:1rem;
+      linear-gradient(
+        180deg,
+        rgba(5,5,4,.94) 0%,
+        rgba(5,5,4,.78) 19%,
+        rgba(5,5,4,.16) 40%,
+        rgba(5,5,4,.20) 100%
+      );
   }
 
 }
