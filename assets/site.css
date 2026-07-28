@@ -3366,3 +3366,18 @@ footer{
   }
 
 }
+
+/* WHY CAF — body copy readability panel */
+
+.intro-video .intro-grid > div{
+  background:rgba(8, 8, 7, 0.68);
+
+  padding:32px 36px;
+
+  max-width:580px;
+
+  border:1px solid rgba(255,255,255,0.10);
+
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
