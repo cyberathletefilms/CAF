@@ -3141,75 +3141,67 @@ footer{
 }
 
 /* ==========================================
-   CAF HEADER LOGO
+   CAF HEADER LOGO — FINAL
    ========================================== */
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  color:#fff;
-  text-decoration:none;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #fff;
+  text-decoration: none;
 }
 
-/* White rectangle */
-.caf-logo-badge{
-  width:70px;
-  height:50px;
+.brand .caf-logo {
+  display: block;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width: 92px;
+  height: 64px;
 
-  background:#fff;
-  overflow:hidden;
-  flex-shrink:0;
+  object-fit: contain;
+
+  background: #fff !important;
+  padding: 0 !important;
+  margin: 0;
+
+  border: none !important;
+  outline: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  transform: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+
+  flex-shrink: 0;
 }
 
-/* Red artwork */
-.caf-logo-badge .caf-logo{
-  display:block;
+.brand small {
+  margin: 0;
+  color: #fff;
 
-  width:46px;
-  height:46px;
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: 1;
 
-  object-fit:contain;
-
-  margin:0;
-  padding:0;
-
-  background:transparent !important;
-
-  transform:none !important;
-  filter:none !important;
-  mix-blend-mode:normal !important;
-  clip-path:none !important;
-  mask:none !important;
-  -webkit-mask:none !important;
+  letter-spacing: .055em;
+  white-space: nowrap;
 }
 
-.brand small{
-  color:#fff;
-  font-size:.78rem;
-  font-weight:600;
-  line-height:1;
-  letter-spacing:.055em;
-  white-space:nowrap;
-}
-
-@media(max-width:820px){
-
-  .caf-logo-badge{
-    width:60px;
-    height:44px;
+@media (max-width: 820px) {
+  .brand {
+    gap: 12px;
   }
 
-  .caf-logo-badge .caf-logo{
-    width:40px;
-    height:40px;
+  .brand .caf-logo {
+    width: 72px;
+    height: 50px;
   }
 
-  .brand small{
-    display:none;
+  .brand small {
+    display: none;
   }
 }
