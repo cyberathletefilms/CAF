@@ -3090,10 +3090,20 @@ footer{
 
 .bbq-card .bbq-logo img{
   position:relative;
-  left:17%;
+  left:16%;
   margin:0 auto;
   width:auto;
   max-width:330px;
   height:100%;
   object-fit:contain;
+}
+
+/* MAFS — keep genre on one line and right aligned */
+.mafs-card .genre,
+.mafs-card .experience-genre{
+  white-space:nowrap;
+  width:auto;
+  max-width:none;
+  text-align:right;
+  justify-self:end;
 }
