@@ -3126,3 +3126,16 @@ footer{
 .brand span{
   white-space:nowrap;
 }
+
+/* MAFS — force genre to one line, top right */
+
+.mafs-card .network-row{
+  flex-wrap:nowrap;
+}
+
+.mafs-card .network-row > span{
+  margin-left:auto;
+  white-space:nowrap;
+  flex:0 0 auto;
+  text-align:right;
+}
