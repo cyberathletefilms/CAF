@@ -3141,7 +3141,7 @@ footer{
 }
 
 /* ==========================================
-   CAF HEADER LOGO — CLEAN FINAL VERSION
+   CAF HEADER LOGO — WHITE BADGE PRESERVED
    ========================================== */
 
 .brand{
@@ -3162,8 +3162,12 @@ footer{
   object-fit:contain;
 
   margin:0;
-  padding:0;
+  padding:3px;
 
+  /* KEEP THE WHITE RECTANGLE */
+  background:#fff !important;
+
+  /* REMOVE OLD EFFECTS */
   transform:none !important;
   filter:none !important;
   mix-blend-mode:normal !important;
@@ -3190,7 +3194,6 @@ footer{
   letter-spacing:.055em;
   white-space:nowrap;
 }
-
 
 @media(max-width:820px){
 
