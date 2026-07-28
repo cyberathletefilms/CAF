@@ -3139,6 +3139,12 @@ footer{
   outline:0;
   box-shadow:none;
 
+  clip-path:circle(50%);
+
+  /* zoom the artwork inside the circle */
+  transform:scale(1.35);
+  transform-origin:center;
+
   flex:0 0 48px;
 }
 
@@ -3165,6 +3171,8 @@ footer{
     width:42px;
     height:42px;
     flex-basis:42px;
+
+    transform:scale(1.35);
   }
 
   .brand small{
