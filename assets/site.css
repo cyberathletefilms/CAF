@@ -3381,3 +3381,17 @@ footer{
   backdrop-filter:blur(7px);
   -webkit-backdrop-filter:blur(7px);
 }
+
+/* Selected Work modal triggers */
+
+button.work-image{
+  width:100%;
+  padding:0;
+  border:0;
+
+  color:inherit;
+  font:inherit;
+  text-align:left;
+
+  cursor:pointer;
+}
