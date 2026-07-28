@@ -3141,14 +3141,13 @@ footer{
 }
 
 /* ==========================================
-   CAF HEADER LOGO — WHITE BADGE PRESERVED
+   CAF HEADER LOGO — FINAL
    ========================================== */
 
 .brand{
   display:flex;
   align-items:center;
   gap:12px;
-
   color:#fff;
   text-decoration:none;
 }
@@ -3156,18 +3155,18 @@ footer{
 .brand .caf-logo{
   display:block;
 
-  width:58px;
-  height:auto;
+  width:70px;
+  height:50px;
 
-  object-fit:contain;
+  object-fit:cover;
+  object-position:center;
 
-  margin:0;
-  padding:3px;
-
-  /* KEEP THE WHITE RECTANGLE */
   background:#fff !important;
 
-  /* REMOVE OLD EFFECTS */
+  /* IMPORTANT: no extra white padding */
+  padding:0 !important;
+  margin:0;
+
   transform:none !important;
   filter:none !important;
   mix-blend-mode:normal !important;
@@ -3184,13 +3183,10 @@ footer{
 
 .brand small{
   margin:0;
-
   color:#fff;
-
   font-size:.78rem;
   font-weight:600;
   line-height:1;
-
   letter-spacing:.055em;
   white-space:nowrap;
 }
@@ -3198,11 +3194,11 @@ footer{
 @media(max-width:820px){
 
   .brand .caf-logo{
-    width:52px;
+    width:58px;
+    height:42px;
   }
 
   .brand small{
     display:none;
   }
-
 }
