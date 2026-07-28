@@ -3506,35 +3506,54 @@ button.work-image{
 
 
 /* ==========================================
-   COLLAGE CANVAS
+   BEHIND THE STORY — 2 / 3 / 3 COLLAGE
    ========================================== */
 
-.story-wall-stage{
-  position:absolute;
-  inset:0;
+.story-collage{
+  position:relative;
 
-  z-index:0;
+  min-height:960px;
+
+  overflow:hidden;
+
+  background:#090908;
+  color:#fff;
 }
 
 
-/* individual photo "prints" */
+/* ==========================================
+   GRID
+   ========================================== */
 
-.story-card{
-  position:absolute;
+.story-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  grid-template-rows:
+    390px
+    285px
+    285px;
+
+  gap:3px;
+
+  min-height:960px;
+
+  background:#090908;
+}
+
+
+.story-photo{
+  position:relative;
 
   overflow:hidden;
 
   background:#111;
-
-  box-shadow:
-    0 24px 65px rgba(0,0,0,.42);
-
-  border:
-    1px solid rgba(255,255,255,.08);
 }
 
 
-.story-card img{
+.story-photo img{
   display:block;
 
   width:100%;
@@ -3544,244 +3563,179 @@ button.work-image{
 
   filter:
     saturate(.92)
-    contrast(1.04);
+    contrast(1.03);
 }
 
 
 /* ==========================================
-   NIGHT SHOOT
-   PRIMARY HERO
+   TOP ROW
    ========================================== */
 
+/* DWTS — left half */
+
+.story-dwts{
+  grid-column:1 / 4;
+  grid-row:1;
+}
+
+.story-dwts img{
+  object-position:center center;
+}
+
+
+/* NIGHT SHOOT — right half */
+
 .story-night{
-  width:54%;
-  height:43%;
-
-  right:-2%;
-  top:4%;
-
-  transform:rotate(1.4deg);
-
-  z-index:3;
+  grid-column:4 / 7;
+  grid-row:1;
 }
 
 .story-night img{
   /*
-    Preserve the cowboy-hat figure
-    on the left side of the photo.
+    Keep cowboy-hat figure visible
+    toward the left side of this frame.
   */
-  object-position:38% center;
+  object-position:40% center;
 }
 
 
 /* ==========================================
-   DIRECTING LADIES
-   FULL IMAGE / NO CROP
+   MIDDLE ROW
    ========================================== */
 
-.story-directing{
-  width:39%;
-  height:42%;
-
-  left:4%;
-  bottom:4%;
-
-  transform:rotate(-2deg);
-
-  z-index:5;
-
-  background:#151514;
-}
-
-.story-directing img{
-  /*
-    Show the full frame.
-    No important people sacrificed.
-  */
-  object-fit:contain;
-  object-position:center;
-}
-
-
-/* ==========================================
-   HORSES
-   WIDE LANDSCAPE
-   ========================================== */
-
-.story-horses{
-  width:43%;
-  height:29%;
-
-  right:4%;
-  bottom:3%;
-
-  transform:rotate(-1.4deg);
-
-  z-index:4;
-}
-
-.story-horses img{
-  /*
-    Preserve far-right cowboy-hat figure.
-  */
-  object-position:63% center;
-}
-
-
-/* ==========================================
-   JAMAICA
-   ========================================== */
-
-.story-jamaica{
-  width:25%;
-  height:29%;
-
-  left:43%;
-  top:47%;
-
-  transform:rotate(2.5deg);
-
-  z-index:6;
-}
-
-.story-jamaica img{
-  object-position:center;
-}
-
-
-/* ==========================================
-   DWTS / CHAKA
-   ========================================== */
-
-.story-dwts{
-  width:25%;
-  height:27%;
-
-  left:17%;
-  top:9%;
-
-  transform:rotate(-3deg);
-
-  z-index:4;
-}
-
-.story-dwts img{
-  object-position:center;
-}
-
-
-/* ==========================================
-   MONSTER GARAGE
-   ========================================== */
-
-.story-monster{
-  width:24%;
-  height:30%;
-
-  right:25%;
-  top:37%;
-
-  transform:rotate(3deg);
-
-  z-index:7;
-}
-
-.story-monster img{
-  object-position:center;
-}
-
-
-/* ==========================================
-   VIDEO VILLAGE
-   TIGHTER CROP — REMOVE DEAD TOP SPACE
-   ========================================== */
-
-.story-village{
-  width:29%;
-  height:27%;
-
-  right:3%;
-  top:43%;
-
-  transform:rotate(-2.5deg);
-
-  z-index:6;
-}
-
-.story-village img{
-  /*
-    Zoom and push framing downward so
-    the monitors + people dominate.
-  */
-  object-fit:cover;
-
-  object-position:center 72%;
-
-  transform:scale(1.22);
-}
-
-
-/* ==========================================
-   NYLE
-   SHOW THE FAR LEFT
-   ========================================== */
+/* NYLE */
 
 .story-nyle{
-  width:25%;
-  height:23%;
-
-  left:-1%;
-  top:38%;
-
-  transform:rotate(2deg);
-
-  z-index:2;
+  grid-column:1 / 3;
+  grid-row:2;
 }
 
 .story-nyle img{
   /*
-    This needs the whole left side visible.
-    You're kneeling at the extreme left.
+    You are kneeling on the extreme left.
+    Favor the left edge heavily.
   */
-  object-fit:cover;
   object-position:left center;
 
   filter:
-    saturate(.72)
+    saturate(.74)
     contrast(1.04)
-    brightness(.82);
+    brightness(.88);
+}
+
+
+/* JAMAICA */
+
+.story-jamaica{
+  grid-column:3 / 5;
+  grid-row:2;
+}
+
+.story-jamaica img{
+  object-position:center center;
+}
+
+
+/* VIDEO VILLAGE */
+
+.story-village{
+  grid-column:5 / 7;
+  grid-row:2;
+}
+
+.story-village img{
+  /*
+    Crop down into the monitors + people.
+    Reduces dead space at top of frame.
+  */
+  object-position:center 72%;
+
+  transform:scale(1.18);
+}
+
+
+/* ==========================================
+   BOTTOM ROW
+   ========================================== */
+
+/* DIRECTING LADIES */
+
+.story-ladies{
+  grid-column:1 / 3;
+  grid-row:3;
+
+  background:#151514;
+}
+
+.story-ladies img{
+  /*
+    Preserve the full frame.
+  */
+  object-fit:contain;
+  object-position:center center;
+}
+
+
+/* MONSTER GARAGE */
+
+.story-monster{
+  grid-column:3 / 5;
+  grid-row:3;
+}
+
+.story-monster img{
+  object-position:center center;
+}
+
+
+/* HORSES */
+
+.story-horses{
+  grid-column:5 / 7;
+  grid-row:3;
+}
+
+.story-horses img{
+  /*
+    Keep you in the cowboy hat visible
+    on the right side.
+  */
+  object-position:68% center;
 }
 
 
 /* ==========================================
    COPY-SIDE SHADE
+
+   Darken DWTS + NYLE only enough
+   to support the text.
+   Keep Night Shoot clean.
    ========================================== */
 
-.story-wall-shade{
+.story-shade{
   position:absolute;
 
   inset:0;
 
-  z-index:8;
+  z-index:2;
 
   pointer-events:none;
 
   background:
 
-    radial-gradient(
-      circle at 12% 14%,
-      rgba(5,5,4,.92) 0%,
-      rgba(5,5,4,.80) 16%,
-      rgba(5,5,4,.48) 30%,
-      rgba(5,5,4,.12) 48%,
-      transparent 63%
+    linear-gradient(
+      90deg,
+      rgba(5,5,4,.94) 0%,
+      rgba(5,5,4,.84) 20%,
+      rgba(5,5,4,.58) 36%,
+      rgba(5,5,4,.10) 51%,
+      transparent 61%
     ),
 
     linear-gradient(
       180deg,
-      rgba(5,5,4,.18) 0%,
-      transparent 48%,
-      rgba(5,5,4,.22) 100%
+      rgba(5,5,4,.22) 0%,
+      transparent 58%
     );
 }
 
@@ -3790,199 +3744,175 @@ button.work-image{
    COPY — TOP LEFT
    ========================================== */
 
-.story-wall-copy{
+.story-copy{
   position:absolute;
 
-  z-index:10;
+  z-index:3;
 
-  top:90px;
+  top:72px;
   left:6vw;
 
-  width:min(560px, 38vw);
+  width:min(560px, 39vw);
 }
 
 
-.story-wall-copy .eyebrow{
+.story-copy .eyebrow{
   margin:0 0 18px;
 
-  color:rgba(255,255,255,.70);
+  color:rgba(255,255,255,.72);
 }
 
 
-.story-wall-copy h2{
+.story-copy h2{
   margin:0;
 
   font-family:Manrope,sans-serif;
 
   font-size:
-    clamp(4rem, 6.2vw, 7.2rem);
+    clamp(4rem, 6.4vw, 7.5rem);
 
   font-weight:700;
 
   line-height:.88;
 
   letter-spacing:-.065em;
+
+  color:#fff;
 }
 
 
 .story-environments{
+  max-width:510px;
+
   margin:28px 0 0;
 
-  max-width:500px;
-
-  color:rgba(255,255,255,.78);
-
   font-size:
-    clamp(1rem,1.2vw,1.18rem);
+    clamp(1rem, 1.15vw, 1.18rem);
 
   line-height:1.55;
+
+  color:rgba(255,255,255,.82);
 }
 
 
 .story-message{
+  max-width:510px;
+
   margin:14px 0 0;
 
-  max-width:500px;
-
-  color:#fff;
-
   font-size:
-    clamp(1rem,1.2vw,1.18rem);
+    clamp(1rem, 1.15vw, 1.18rem);
 
   line-height:1.55;
 
   font-weight:600;
-}
 
-
-/* ==========================================
-   HOVER — VERY SUBTLE
-   ========================================== */
-
-.story-card{
-  transition:
-    transform .8s ease,
-    box-shadow .8s ease;
-}
-
-.story-card:hover{
-  box-shadow:
-    0 32px 90px rgba(0,0,0,.55);
+  color:#fff;
 }
 
 
 /* ==========================================
    MOBILE
-   More structured so it doesn't become chaos
    ========================================== */
 
 @media(max-width:820px){
 
-  .story-wall{
-    min-height:1250px;
-    height:auto;
+  .story-collage{
+    min-height:auto;
   }
 
 
-  .story-wall-stage{
-    position:absolute;
-    inset:0;
-  }
+  .story-grid{
+    grid-template-columns:
+      repeat(2, 1fr);
 
+    grid-template-rows:
+      300px
+      220px
+      220px
+      220px;
 
-  .story-card{
-    transform:none;
-  }
-
-
-  .story-night{
-    width:92%;
-    height:300px;
-
-    left:4%;
-    right:auto;
-    top:300px;
-  }
-
-
-  .story-directing{
-    width:72%;
-    height:270px;
-
-    left:5%;
-    bottom:auto;
-    top:620px;
-  }
-
-
-  .story-horses{
-    width:76%;
-    height:240px;
-
-    right:4%;
-    bottom:auto;
-    top:920px;
-  }
-
-
-  .story-jamaica{
-    width:42%;
-    height:220px;
-
-    left:auto;
-    right:3%;
-    top:580px;
+    min-height:auto;
   }
 
 
   .story-dwts{
-    width:36%;
-    height:180px;
+    grid-column:1;
+    grid-row:1;
+  }
 
-    left:2%;
-    top:1060px;
+
+  .story-night{
+    grid-column:2;
+    grid-row:1;
+  }
+
+
+  .story-nyle{
+    grid-column:1;
+    grid-row:2;
+  }
+
+
+  .story-jamaica{
+    grid-column:2;
+    grid-row:2;
+  }
+
+
+  .story-village{
+    grid-column:1 / 3;
+    grid-row:3;
+  }
+
+
+  .story-ladies{
+    grid-column:1;
+    grid-row:4;
   }
 
 
   .story-monster{
-    width:36%;
-    height:190px;
-
-    right:2%;
-    top:1040px;
+    grid-column:2;
+    grid-row:4;
   }
 
 
-  .story-village,
-  .story-nyle{
+  .story-horses{
     display:none;
   }
 
 
-  .story-wall-copy{
-    top:54px;
-    left:24px;
-    right:24px;
+  .story-copy{
+    top:44px;
+    left:22px;
+    right:22px;
 
     width:auto;
   }
 
 
-  .story-wall-copy h2{
+  .story-copy h2{
     font-size:
-      clamp(3.8rem,16vw,5.5rem);
+      clamp(3.4rem, 15vw, 5rem);
   }
 
 
-  .story-wall-shade{
+  .story-environments,
+  .story-message{
+    max-width:380px;
+  }
+
+
+  .story-shade{
     background:
 
       linear-gradient(
         180deg,
         rgba(5,5,4,.94) 0%,
-        rgba(5,5,4,.78) 19%,
-        rgba(5,5,4,.16) 40%,
-        rgba(5,5,4,.20) 100%
+        rgba(5,5,4,.76) 22%,
+        rgba(5,5,4,.18) 45%,
+        transparent 70%
       );
   }
 
