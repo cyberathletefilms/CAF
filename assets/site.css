@@ -3107,3 +3107,22 @@ footer{
   text-align:right;
   justify-self:end;
 }
+
+/* CAF HEADER LOGO */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand .caf-logo{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+.brand span{
+  white-space:nowrap;
+}
