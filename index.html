@@ -1079,12 +1079,10 @@
 
   <!-- CONTACT -->
 
-  <section class="contact section dark" id="contact">
+<section class="contact section dark" id="contact">
 
-    <p class="eyebrow">
-      Have a story?
-    </p>
-
+  <div class="contact-intro">
+    <p class="eyebrow">Have a story?</p>
 
     <h2>
       Let's make something
@@ -1092,21 +1090,103 @@
       worth watching.
     </h2>
 
-
     <p class="contact-copy">
-      Based in Leander. Serving Austin, Central Texas
-      and productions nationwide.
+      Tell me a little about your project, athlete, brand or production.
+      I’ll respond directly as soon as I can.
     </p>
+  </div>
 
-
-    <a
-      class="button primary large-button"
-      href="mailto:eddie@cyberathletefilms.com"
+  <form
+    class="contact-form"
+    action="https://formsubmit.co/eddie@cyberathletefilms.com"
+    method="POST"
+  >
+    <input
+      type="hidden"
+      name="_subject"
+      value="New Cyber Athlete Films Website Inquiry"
     >
-      Get in touch
-    </a>
 
-    </section>
+    <input
+      type="hidden"
+      name="_template"
+      value="table"
+    >
+
+    <input
+      type="hidden"
+      name="_captcha"
+      value="true"
+    >
+
+    <input
+      type="text"
+      name="_honey"
+      tabindex="-1"
+      autocomplete="off"
+      style="display:none"
+    >
+
+    <div class="contact-field-row">
+      <label class="contact-field">
+        <span>Name</span>
+        <input
+          type="text"
+          name="Name"
+          autocomplete="name"
+          required
+        >
+      </label>
+
+      <label class="contact-field">
+        <span>Email</span>
+        <input
+          type="email"
+          name="Email"
+          autocomplete="email"
+          required
+        >
+      </label>
+    </div>
+
+    <label class="contact-field">
+      <span>What are you interested in?</span>
+
+      <select name="Project Type" required>
+        <option value="" selected disabled>Select a project type</option>
+        <option value="Brand or business film">Brand or business film</option>
+        <option value="CAF Next Level athlete profile">CAF Next Level athlete profile</option>
+        <option value="Event coverage">Event coverage</option>
+        <option value="Television or production work">Television or production work</option>
+        <option value="Editing or post-production">Editing or post-production</option>
+        <option value="Something else">Something else</option>
+      </select>
+    </label>
+
+    <label class="contact-field">
+      <span>Tell me about your project</span>
+
+      <textarea
+        name="Project Details"
+        rows="6"
+        placeholder="What are you hoping to create? Include any important dates, location or budget details."
+        required
+      ></textarea>
+    </label>
+
+    <button class="button primary large-button" type="submit">
+      Send inquiry
+    </button>
+
+    <p class="contact-email-backup">
+      Prefer email?
+      <a href="mailto:eddie@cyberathletefilms.com">
+        eddie@cyberathletefilms.com
+      </a>
+    </p>
+  </form>
+
+</section>
 
 
 </main>
