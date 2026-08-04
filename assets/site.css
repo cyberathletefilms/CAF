@@ -3975,3 +3975,125 @@ button.work-image{
   }
 
 }
+
+/* CONTACT FORM */
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: start;
+}
+
+.contact-intro {
+  position: sticky;
+  top: 8rem;
+}
+
+.contact-copy {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.7;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.35rem;
+  width: 100%;
+  max-width: 760px;
+}
+
+.contact-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact-field span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.055);
+  color: #fff;
+  font: inherit;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.contact-field input,
+.contact-field select {
+  min-height: 3.6rem;
+}
+
+.contact-field textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.085);
+}
+
+.contact-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.contact-field select option {
+  color: #111;
+  background: #fff;
+}
+
+.contact-form .large-button {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-email-backup {
+  margin: 0.25rem 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.92rem;
+}
+
+.contact-email-backup a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.22rem;
+}
+
+@media (max-width: 800px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-intro {
+    position: static;
+  }
+
+  .contact-field-row {
+    grid-template-columns: 1fr;
+  }
+}
