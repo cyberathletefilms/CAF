@@ -4097,3 +4097,242 @@ button.work-image{
     grid-template-columns: 1fr;
   }
 }
+
+/* CINEMATIC CONTACT */
+
+.contact-cinematic {
+  position: relative;
+  min-height: 860px;
+  overflow: hidden;
+  background: #080706;
+  color: #f4f0e8;
+}
+
+.contact-cinematic-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/metal-sparks.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.025);
+}
+
+.contact-cinematic-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 4, 3, 0.95) 0%,
+      rgba(5, 4, 3, 0.79) 42%,
+      rgba(5, 4, 3, 0.63) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 4, 3, 0.18) 0%,
+      rgba(5, 4, 3, 0.84) 100%
+    );
+}
+
+.contact-cinematic-inner {
+  position: relative;
+  z-index: 1;
+  min-height: 860px;
+  width: min(1440px, calc(100% - 8vw));
+  margin: 0 auto;
+  padding: clamp(7rem, 11vw, 11rem) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: clamp(4rem, 10vw, 10rem);
+  align-items: center;
+}
+
+.contact-cinematic-copy {
+  align-self: center;
+}
+
+.contact-cinematic-copy .eyebrow {
+  margin-bottom: 2rem;
+  color: rgba(244, 240, 232, 0.62);
+}
+
+.contact-cinematic-copy h2 {
+  max-width: 820px;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3.4rem, 7.1vw, 7.7rem);
+  font-weight: 700;
+  line-height: 0.89;
+  letter-spacing: -0.075em;
+  text-transform: uppercase;
+}
+
+.contact-cinematic-copy h2 em {
+  color: #dc9a4a;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.contact-cinematic-copy > p:not(.eyebrow) {
+  max-width: 500px;
+  margin: 2.5rem 0 0;
+  color: rgba(244, 240, 232, 0.68);
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.contact-direct-email {
+  display: inline-block;
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.42);
+  color: #f4f0e8;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.contact-direct-email:hover {
+  color: #dc9a4a;
+  border-color: #dc9a4a;
+}
+
+.contact-editorial-form {
+  width: 100%;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  background: rgba(10, 9, 7, 0.7);
+  border: 1px solid rgba(244, 240, 232, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.editorial-field {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.editorial-field > span {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: rgba(244, 240, 232, 0.5);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.editorial-field input,
+.editorial-field select,
+.editorial-field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.35rem 0 0.9rem;
+  border: 0;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.28);
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #f4f0e8;
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color 180ms ease;
+}
+
+.editorial-field textarea {
+  min-height: 100px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.editorial-field input::placeholder,
+.editorial-field textarea::placeholder {
+  color: rgba(244, 240, 232, 0.36);
+}
+
+.editorial-field input:focus,
+.editorial-field select:focus,
+.editorial-field textarea:focus {
+  border-color: #dc9a4a;
+}
+
+.editorial-field select option {
+  color: #111;
+  background: #f4f0e8;
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 1.15rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  border-top: 1px solid #f4f0e8;
+  border-bottom: 1px solid #f4f0e8;
+  background: transparent;
+  color: #f4f0e8;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    padding 180ms ease;
+}
+
+.contact-submit span:last-child {
+  font-size: 1.3rem;
+}
+
+.contact-submit:hover {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #dc9a4a;
+  border-color: #dc9a4a;
+}
+
+.contact-honeypot {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .contact-cinematic,
+  .contact-cinematic-inner {
+    min-height: auto;
+  }
+
+  .contact-cinematic-bg {
+    background-position: 58% center;
+  }
+
+  .contact-cinematic-shade {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 4, 3, 0.83) 0%,
+        rgba(5, 4, 3, 0.94) 100%
+      );
+  }
+
+  .contact-cinematic-inner {
+    width: min(100% - 2.5rem, 720px);
+    padding: 6rem 0 4rem;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .contact-cinematic-copy h2 {
+    font-size: clamp(3.1rem, 14vw, 5.8rem);
+  }
+
+  .contact-editorial-form {
+    padding: 2rem 1.4rem;
+  }
+}
