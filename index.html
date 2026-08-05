@@ -1077,114 +1077,171 @@
 
 
 
-  <!-- CONTACT -->
+ <!-- CONTACT -->
 
-<section class="contact section dark" id="contact">
+<section class="contact-cinematic" id="contact">
 
-  <div class="contact-intro">
-    <p class="eyebrow">Have a story?</p>
+  <div class="contact-cinematic-bg" aria-hidden="true"></div>
+  <div class="contact-cinematic-shade" aria-hidden="true"></div>
 
-    <h2>
-      Let's make something
-      <br>
-      worth watching.
-    </h2>
+  <div class="contact-cinematic-inner">
 
-    <p class="contact-copy">
-      Tell me a little about your project, athlete, brand or production.
-      I’ll respond directly as soon as I can.
-    </p>
-  </div>
+    <div class="contact-cinematic-copy">
 
-  <form
-    class="contact-form"
-    action="https://formsubmit.co/eddie@cyberathletefilms.com"
-    method="POST"
-  >
-    <input
-      type="hidden"
-      name="_subject"
-      value="New Cyber Athlete Films Website Inquiry"
+      <p class="eyebrow">
+        Start a project
+      </p>
+
+      <h2>
+        Every project
+        <br>
+        starts with
+        <br>
+        <em>a conversation.</em>
+      </h2>
+
+      <p>
+        Tell me what you’re building, who it’s for and what you
+        want people to feel when they see it.
+      </p>
+
+      <a
+        class="contact-direct-email"
+        href="mailto:eddie@cyberathletefilms.com"
+      >
+        eddie@cyberathletefilms.com
+      </a>
+
+    </div>
+
+
+    <form
+      class="contact-editorial-form"
+      action="https://formsubmit.co/eddie@cyberathletefilms.com"
+      method="POST"
     >
 
-    <input
-      type="hidden"
-      name="_template"
-      value="table"
-    >
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Cyber Athlete Films Website Inquiry"
+      >
 
-    <input
-      type="hidden"
-      name="_captcha"
-      value="true"
-    >
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
 
-    <input
-      type="text"
-      name="_honey"
-      tabindex="-1"
-      autocomplete="off"
-      style="display:none"
-    >
+      <input
+        type="hidden"
+        name="_captcha"
+        value="true"
+      >
 
-    <div class="contact-field-row">
-      <label class="contact-field">
-        <span>Name</span>
+      <input
+        type="text"
+        name="_honey"
+        tabindex="-1"
+        autocomplete="off"
+        class="contact-honeypot"
+      >
+
+
+      <label class="editorial-field">
+
+        <span>01 — Your name</span>
+
         <input
           type="text"
           name="Name"
+          placeholder="Name"
           autocomplete="name"
           required
         >
+
       </label>
 
-      <label class="contact-field">
-        <span>Email</span>
+
+      <label class="editorial-field">
+
+        <span>02 — Your email</span>
+
         <input
           type="email"
           name="Email"
+          placeholder="Email address"
           autocomplete="email"
           required
         >
+
       </label>
-    </div>
 
-    <label class="contact-field">
-      <span>What are you interested in?</span>
 
-      <select name="Project Type" required>
-        <option value="" selected disabled>Select a project type</option>
-        <option value="Brand or business film">Brand or business film</option>
-        <option value="CAF Next Level athlete profile">CAF Next Level athlete profile</option>
-        <option value="Event coverage">Event coverage</option>
-        <option value="Television or production work">Television or production work</option>
-        <option value="Editing or post-production">Editing or post-production</option>
-        <option value="Something else">Something else</option>
-      </select>
-    </label>
+      <label class="editorial-field">
 
-    <label class="contact-field">
-      <span>Tell me about your project</span>
+        <span>03 — What are we making?</span>
 
-      <textarea
-        name="Project Details"
-        rows="6"
-        placeholder="What are you hoping to create? Include any important dates, location or budget details."
-        required
-      ></textarea>
-    </label>
+        <select name="Project Type" required>
 
-    <button class="button primary large-button" type="submit">
-      Send inquiry
-    </button>
+          <option value="" selected disabled>
+            Select a project type
+          </option>
 
-    <p class="contact-email-backup">
-      Prefer email?
-      <a href="mailto:eddie@cyberathletefilms.com">
-        eddie@cyberathletefilms.com
-      </a>
-    </p>
-  </form>
+          <option value="Brand or business film">
+            Brand or business film
+          </option>
+
+          <option value="CAF Next Level athlete profile">
+            CAF Next Level athlete profile
+          </option>
+
+          <option value="Event coverage">
+            Event coverage
+          </option>
+
+          <option value="Television or production work">
+            Television or production work
+          </option>
+
+          <option value="Editing or post-production">
+            Editing or post-production
+          </option>
+
+          <option value="Something else">
+            Something else
+          </option>
+
+        </select>
+
+      </label>
+
+
+      <label class="editorial-field">
+
+        <span>04 — Tell me about it</span>
+
+        <textarea
+          name="Project Details"
+          rows="4"
+          placeholder="A few details about the story, timing and location..."
+          required
+        ></textarea>
+
+      </label>
+
+
+      <button
+        class="contact-submit"
+        type="submit"
+      >
+        <span>Send inquiry</span>
+        <span aria-hidden="true">↗</span>
+      </button>
+
+    </form>
+
+  </div>
 
 </section>
 
