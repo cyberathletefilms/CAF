@@ -143,3 +143,74 @@ document.addEventListener("keydown", (event) => {
   }
 
 });
+/* =========================================================
+   CONTACT FORM — AJAX SUBMISSION
+========================================================= */
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm && formStatus) {
+
+  contactForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    const formData = new FormData(contactForm);
+
+    const formPayload = Object.fromEntries(
+      formData.entries()
+    );
+
+    submitButton.disabled = true;
+    formStatus.textContent = "Sending...";
+
+    try {
+
+      const response = await fetch(
+        contactForm.action,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: JSON.stringify(formPayload)
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.message || "The message could not be sent."
+        );
+      }
+
+      formStatus.textContent =
+        "Thank you. Your message has been sent.";
+
+      contactForm.reset();
+
+    } catch (error) {
+
+      console.error(error);
+
+      formStatus.textContent =
+        "Something went wrong. Please email eddie@cyberathletefilms.com.";
+
+    } finally {
+
+      submitButton.disabled = false;
+
+    }
+
+  });
+
+}
