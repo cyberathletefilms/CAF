@@ -1161,3 +1161,76 @@ footer {
   pointer-events: none;
   z-index: 3;
 }
+
+/* =========================================================
+   HOT ROD INTERMISSION
+========================================================= */
+
+.car-intermission {
+  position: relative;
+
+  width: 100%;
+  height: clamp(420px, 62vw, 760px);
+
+  overflow: hidden;
+  background: #050505;
+}
+
+.car-intermission-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 58%;
+
+  transform: scale(1.015);
+  transition:
+    transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 1.2s ease;
+}
+
+.car-intermission-shade {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.48) 0%,
+      rgba(0, 0, 0, 0.04) 24%,
+      rgba(0, 0, 0, 0.06) 72%,
+      rgba(0, 0, 0, 0.58) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      transparent 34%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+}
+
+.car-intermission:hover .car-intermission-image {
+  transform: scale(1.035);
+}
+
+
+/* MOBILE HOT ROD INTERMISSION */
+
+@media (max-width: 900px) {
+
+  .car-intermission {
+    height: 56svh;
+    min-height: 390px;
+  }
+
+  .car-intermission-image {
+    object-position: 52% center;
+  }
+
+}
