@@ -1,258 +1,216 @@
-/* =========================================
-   CAF SITE JAVASCRIPT
-   ========================================= */
+const menuButton = document.querySelector("[data-menu-button]");
+const nav = document.querySelector("[data-nav]");
+
+const modal = document.querySelector("[data-modal]");
+const modalFrame = document.querySelector("[data-modal-frame]");
+const modalTitle = document.querySelector("[data-modal-title]");
+
+const modalCloseButtons = document.querySelectorAll(
+  "[data-modal-close]"
+);
+
+const videoTriggers = document.querySelectorAll(
+  ".video-trigger"
+);
 
 
-/* -----------------------------------------
+/* =========================================================
+   COPYRIGHT YEAR
+========================================================= */
+
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+
+/* =========================================================
    MOBILE MENU
-   ----------------------------------------- */
+========================================================= */
 
-const menuToggle =
-  document.querySelector('.menu-toggle');
+if (menuButton && nav) {
 
-const siteNav =
-  document.querySelector('.site-nav');
+  menuButton.addEventListener("click", () => {
 
+    const isOpen = nav.classList.toggle("is-open");
 
-if (menuToggle && siteNav) {
+    menuButton.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
 
-  menuToggle.addEventListener(
-    'click',
-    () => {
-
-      const isOpen =
-        siteNav.classList.toggle('open');
+  });
 
 
-      menuToggle.setAttribute(
-        'aria-expanded',
-        isOpen ? 'true' : 'false'
-      );
+  nav.querySelectorAll("a").forEach((link) => {
 
-    }
-  );
+    link.addEventListener("click", () => {
 
+      nav.classList.remove("is-open");
 
-  siteNav
-    .querySelectorAll('a')
-    .forEach(link => {
-
-      link.addEventListener(
-        'click',
-        () => {
-
-          siteNav.classList.remove('open');
-
-          menuToggle.setAttribute(
-            'aria-expanded',
-            'false'
-          );
-
-        }
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
       );
 
     });
 
+  });
+
 }
 
 
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
 
-/* -----------------------------------------
-   SELECTED WORK YOUTUBE MODAL
-   ----------------------------------------- */
+function openVideo(videoId, title) {
 
-const modal =
-  document.querySelector('.video-modal');
-
-const modalTitle =
-  document.querySelector('.modal-title');
-
-const modalIframe =
-  document.querySelector('.modal-youtube');
-
-const modalClose =
-  document.querySelector('.modal-close');
-
-const modalBackdrop =
-  document.querySelector('.modal-backdrop');
-
-const videoProjects =
-  document.querySelectorAll('.video-project');
-
-
-
-function openVideo(project) {
-
-  if (
-    !modal ||
-    !modalIframe
-  ) {
+  if (!modal || !modalFrame || !modalTitle) {
     return;
   }
 
-
-  const videoId =
-    project.dataset.video;
-
-  const title =
-    project.dataset.title || '';
-
-
-  if (!videoId) {
-    return;
-  }
-
-
-  if (modalTitle) {
-    modalTitle.textContent = title;
-  }
-
-
-  modalIframe.src =
+  modalFrame.src =
     `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
+  modalTitle.textContent =
+    title || "Cyber Athlete Films";
 
-  modal.classList.add('open');
-
+  modal.classList.add("is-open");
 
   modal.setAttribute(
-    'aria-hidden',
-    'false'
+    "aria-hidden",
+    "false"
   );
 
-
-  document.body
-    .classList
-    .add('modal-open');
+  document.body.classList.add("modal-open");
 
 }
-
 
 
 function closeVideo() {
 
-  if (!modal) {
+  if (!modal || !modalFrame) {
     return;
   }
 
-
-  modal.classList.remove('open');
-
+  modal.classList.remove("is-open");
 
   modal.setAttribute(
-    'aria-hidden',
-    'true'
+    "aria-hidden",
+    "true"
   );
 
+  modalFrame.src = "";
 
-  if (modalIframe) {
-
-    /*
-      Clearing the iframe URL
-      immediately stops playback.
-    */
-
-    modalIframe.src = '';
-
-  }
-
-
-  document.body
-    .classList
-    .remove('modal-open');
+  document.body.classList.remove("modal-open");
 
 }
 
 
+videoTriggers.forEach((trigger) => {
 
-videoProjects.forEach(
-  project => {
+  trigger.addEventListener("click", () => {
 
-
-    project.addEventListener(
-      'click',
-      () => {
-        openVideo(project);
-      }
+    openVideo(
+      trigger.dataset.video,
+      trigger.dataset.title
     );
 
+  });
 
-    project.addEventListener(
-      'keydown',
-      event => {
+});
 
-        if (
-          event.key === 'Enter' ||
-          event.key === ' '
-        ) {
 
-          event.preventDefault();
+modalCloseButtons.forEach((button) => {
 
-          openVideo(project);
+  button.addEventListener(
+    "click",
+    closeVideo
+  );
 
+});
+
+
+document.addEventListener("keydown", (event) => {
+
+  if (
+    event.key === "Escape" &&
+    modal?.classList.contains("is-open")
+  ) {
+    closeVideo();
+  }
+
+});
+/* =========================================================
+   CONTACT FORM — AJAX SUBMISSION
+========================================================= */
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+if (contactForm && formStatus) {
+
+  contactForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector(
+      'button[type="submit"]'
+    );
+
+    const formData = new FormData(contactForm);
+
+    const formPayload = Object.fromEntries(
+      formData.entries()
+    );
+
+    submitButton.disabled = true;
+    formStatus.textContent = "Sending...";
+
+    try {
+
+      const response = await fetch(
+        contactForm.action,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+
+          body: JSON.stringify(formPayload)
         }
+      );
 
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.message || "The message could not be sent."
+        );
       }
-    );
 
+      formStatus.textContent =
+        "Thank you. Your message has been sent.";
 
-  }
-);
+      contactForm.reset();
 
+    } catch (error) {
 
+      console.error(error);
 
-if (modalClose) {
+      formStatus.textContent =
+        "Something went wrong. Please email eddie@cyberathletefilms.com.";
 
-  modalClose.addEventListener(
-    'click',
-    closeVideo
-  );
+    } finally {
 
-}
-
-
-
-if (modalBackdrop) {
-
-  modalBackdrop.addEventListener(
-    'click',
-    closeVideo
-  );
-
-}
-
-
-
-document.addEventListener(
-  'keydown',
-  event => {
-
-    if (
-      event.key === 'Escape' &&
-      modal &&
-      modal.classList.contains('open')
-    ) {
-
-      closeVideo();
+      submitButton.disabled = false;
 
     }
 
-  }
-);
-
-
-
-/* -----------------------------------------
-   FOOTER YEAR
-   ----------------------------------------- */
-
-const year =
-  document.querySelector('#year');
-
-
-if (year) {
-
-  year.textContent =
-    new Date().getFullYear();
+  });
 
 }

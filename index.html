@@ -2,515 +2,310 @@
 <html lang="en">
 
 <head>
-<link rel="icon" type="image/png" href="/assets/logos/caf-logo.png">
-<link rel="shortcut icon" type="image/png" href="/assets/logos/caf-logo.png">
-<link rel="apple-touch-icon" href="/assets/logos/caf-logo.png">
-  
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Cyber Athlete Films | Network Experience. Central Texas Roots.</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Cyber Athlete Films — Stories Made Where They Happen
+  </title>
 
   <meta
     name="description"
-    content="Cyber Athlete Films brings documentary storytelling and network television experience to brands, businesses and productions in Central Texas and beyond."
+    content="Cyber Athlete Films creates documentary-driven films for television, brands, athletes and organizations from Central Texas to productions nationwide."
   >
 
-  <meta property="og:title" content="Cyber Athlete Films">
+  <meta
+    property="og:title"
+    content="Cyber Athlete Films"
+  >
 
   <meta
     property="og:description"
-    content="Network experience. Central Texas roots. Real stories, made cinematic."
+    content="Stories made where they happen."
   >
 
-  <meta property="og:type" content="website">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta
+    property="og:type"
+    content="website"
+  >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+    rel="icon"
+    type="image/png"
+    href="assets/logos/caf-logo.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="assets/logos/caf-logo.png"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="assets/site.css">
+  <link
+    rel="stylesheet"
+    href="assets/site.css"
+  >
 </head>
 
 
 <body>
 
+  <!-- SITE HEADER -->
 
-<header class="site-header">
+  <header
+    class="site-header"
+    data-header
+  >
 
-<a class="brand" href="#top" aria-label="Cyber Athlete Films home">
+  <a
+  class="wordmark"
+  href="#top"
+  aria-label="Cyber Athlete Films home"
+>
 
-  <span class="caf-logo-circle">
-    <img
-      src="assets/logos/caf-logo.png"
-      alt=""
-      class="caf-logo"
-    >
+  <img
+    class="wordmark-logo"
+    src="assets/images/caf-logo.png"
+    alt=""
+  >
+
+  <span class="wordmark-name">
+    Cyber Athlete Films
   </span>
-
-  <small>Cyber Athlete Films</small>
 
 </a>
 
-  <button
-    class="menu-toggle"
-    aria-label="Open menu"
-    aria-expanded="false"
-  >
-    Menu
-  </button>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-menu-button
+    >
+      Menu
+    </button>
 
 
-  <nav class="site-nav" aria-label="Primary navigation">
+    <nav
+      class="site-nav"
+      id="site-nav"
+      aria-label="Primary navigation"
+      data-nav
+    >
 
-    <a href="#work">Work</a>
+      <a href="#stories">
+        Stories
+      </a>
 
-    <a href="#television">Television</a>
+      <a href="#productions">
+        Productions
+      </a>
 
-    <a href="#story">Behind the Story</a>
+      <a href="#next-level">
+        Next Level
+      </a>
 
-    <a href="#about">About</a>
+      <a href="#producer">
+        The Producer
+      </a>
 
-    <a class="nav-cta" href="#contact">
-      Start a project
-    </a>
+      <a href="#contact">
+        Contact
+      </a>
 
-  </nav>
+    </nav>
 
-</header>
-
-
-
-<main id="top">
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-media" aria-hidden="true"></div>
-
-    <div class="hero-overlay"></div>
+  </header>
 
 
-    <div class="hero-copy reveal">
 
-      <p class="eyebrow">
-        Leander · Austin · Anywhere the story goes
-      </p>
+  <main id="top">
 
-      <h1>
-        Network experience.
-        <br>
-        <em>Central Texas roots.</em>
-      </h1>
 
-      <p class="lede">
-        Documentary-driven films for television, brands
-        and the people building our community.
-      </p>
+    <!-- HERO -->
 
-      <div class="hero-actions">
+    <section
+      class="hero"
+      aria-labelledby="hero-title"
+    >
 
-        <a class="button primary" href="#reel">
-          Watch the reel
-        </a>
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/images/CAR.jpg"
+        aria-hidden="true"
+      >
 
-        <a class="button ghost" href="#contact">
-          Start a project
+        <source
+          src="assets/video/hero-montage.mp4"
+          type="video/mp4"
+        >
+
+      </video>
+
+
+      <div
+        class="hero-shade"
+        aria-hidden="true"
+      ></div>
+
+
+      <div
+        class="hero-grain"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="hero-content">
+
+        <p class="kicker">
+          Cyber Athlete Films · Austin, Texas
+        </p>
+
+        <h1 id="hero-title">
+          Stories made
+          <br>
+          where they
+          <br>
+          happen.
+        </h1>
+
+      </div>
+
+
+      <div class="hero-footer">
+
+        <span>
+          Field Notes 001
+        </span>
+
+        <button
+          class="hero-reel-link video-trigger"
+          type="button"
+          data-video="3Ivg_2yOOL4"
+          data-title="Cyber Athlete Films Reel"
+        >
+          Watch Reel ↗
+        </button>
+
+        <a href="#stories">
+          Scroll ↓
         </a>
 
       </div>
 
-    </div>
+    </section>
 
 
-    <a class="scroll-cue" href="#reel">
-      Scroll to explore ↓
-    </a>
+  
 
-  </section>
+    <!-- RECENT STORIES INTRO -->
+
+    <section
+      class="chapter intro-chapter"
+      id="stories"
+    >
+
+      <div class="chapter-label">
+
+        <span>
+          001
+        </span>
+
+        <span>
+          Recent Stories
+        </span>
+
+      </div>
 
 
+      <div class="intro-statement">
 
-  <!-- REEL -->
-
-  <section class="reel section dark" id="reel">
-
-    <div class="section-heading">
-
-      <div>
-
-        <p class="eyebrow">
-          Film Reel
+        <p>
+          The best stories aren’t manufactured.
         </p>
 
         <h2>
-          Story comes first.
+          They’re discovered.
         </h2>
 
       </div>
 
-
-      <p>
-        Producing, directing and field storytelling across
-        national television, documentary and branded work.
-      </p>
-
-    </div>
-
-
-    <div class="video-frame">
-
-      <iframe
-        src="https://www.youtube.com/embed/3Ivg_2yOOL4?rel=0"
-        title="Cyber Athlete Films reel"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-
-    </div>
-
-  </section>
+    </section>
 
 
 
-  <!-- SELECTED WORK -->
+    <!-- RECENT STORIES -->
 
-  <section class="selected-work section dark" id="work">
-
-    <div class="work-heading">
-
-      <p class="eyebrow">
-        Selected Work
-      </p>
-
-      <h2>
-        Stories built to
-        <em>move.</em>
-      </h2>
-
-    </div>
-
-
-    <div class="work-grid">
-
-
-  <!-- 01 SOUNDHAVEN -->
-
-  <article class="work-project">
-
-    <button
-      class="work-image video-project"
-      type="button"
-      data-video="YJA1baMBZfg"
-      data-title="SoundHaven Audio"
-      aria-label="Play SoundHaven Audio film"
+    <section
+      class="stories"
+      aria-label="Recent stories"
     >
 
-      <img
-        src="assets/posters/soundhaven.jpg"
-        alt="SoundHaven Audio"
-      >
 
-      <span class="work-number">
-        01
-      </span>
+      <!-- SOUNDHAVEN -->
 
-      <div class="work-overlay">
+      <article class="story story-large">
 
-        <span class="work-category">
-          Product Film · Brand Launch
-        </span>
+        <img
+          src="assets/posters/soundhaven.jpg"
+          alt="SoundHaven Audio film"
+        >
 
-        <h3>
-          SoundHaven Audio
-        </h3>
+        <div class="story-shade"></div>
 
-        <span class="work-play">
-          <b>▶</b>
-          Play Film
-        </span>
+        <button
+    class="story-click-target video-trigger"
+    type="button"
+    data-video="YJA1baMBZfg"
+    data-title="SoundHaven Audio"
+    aria-label="Watch SoundHaven Audio"
+></button>
 
-      </div>
-
-    </button>
-
-
-    <div class="work-info">
-
-      <div>
-        <h4>SoundHaven Audio</h4>
-        <span>Product film · Brand launch</span>
-      </div>
-
-      <p>
-        A rugged product story built around movement,
-        impact and the places music goes.
-      </p>
-
-    </div>
-
-  </article>
-
-
-  <!-- 02 METAL CHURCH -->
-
-  <article class="work-project">
-
-    <button
-      class="work-image video-project"
-      type="button"
-      data-video="pkG-U00eoBM"
-      data-title="Metal Church"
-      aria-label="Play Metal Church film"
-    >
-
-      <img
-        src="assets/posters/metal-church.jpg"
-        alt="Metal Church"
-      >
-
-      <span class="work-number">
-        02
-      </span>
-
-      <div class="work-overlay">
-
-        <span class="work-category">
-          Television · Documentary Craft
-        </span>
-
-        <h3>
-          Metal Church
-        </h3>
-
-        <span class="work-play">
-          <b>▶</b>
-          Play Film
-        </span>
-
-      </div>
-
-    </button>
-
-
-    <div class="work-info">
-
-      <div>
-        <h4>Metal Church</h4>
-        <span>Television · Documentary craft</span>
-      </div>
-
-      <p>
-        Jesse James breaks down the craft and machinery
-        behind metalwork in a character-led television excerpt.
-      </p>
-
-    </div>
-
-  </article>
-
-
-  <!-- 03 DTX -->
-
-  <article class="work-project">
-
-    <button
-      class="work-image video-project"
-      type="button"
-      data-video="QzWBAIY3KHU"
-      data-title="DTX Golf"
-      aria-label="Play DTX Golf film"
-    >
-
-      <img
-        src="assets/posters/dtx-golf.jpg"
-        alt="DTX Golf"
-      >
-
-      <span class="work-number">
-        03
-      </span>
-
-      <div class="work-overlay">
-
-        <span class="work-category">
-          Event Film · Tournament Highlights
-        </span>
-
-        <h3>
-          DTX Golf
-        </h3>
-
-        <span class="work-play">
-          <b>▶</b>
-          Play Film
-        </span>
-
-      </div>
-
-    </button>
-
-
-    <div class="work-info">
-
-      <div>
-        <h4>DTX Golf</h4>
-        <span>Event film · Tournament highlights</span>
-      </div>
-
-      <p>
-        A fast, character-led tournament film built around
-        competition, personality and atmosphere.
-      </p>
-
-    </div>
-
-  </article>
-
-
-  <!-- 04 STEELEABLE -->
-
-  <article class="work-project">
-
-    <button
-      class="work-image video-project"
-      type="button"
-      data-video="cwYPithgf-0"
-      data-title="Steeleable Moments"
-      aria-label="Play Steeleable Moments film"
-    >
-
-      <img
-        src="assets/posters/steeleable.jpg"
-        alt="Steeleable Moments"
-      >
-
-      <span class="work-number">
-        04
-      </span>
-
-      <div class="work-overlay">
-
-        <span class="work-category">
-          Brand Film · Client Story
-        </span>
-
-        <h3>
-          Steeleable Moments
-        </h3>
-
-        <span class="work-play">
-          <b>▶</b>
-          Play Film
-        </span>
-
-      </div>
-
-    </button>
-
-
-    <div class="work-info">
-
-      <div>
-        <h4>Steeleable Moments</h4>
-        <span>Brand film · Client story</span>
-      </div>
-
-      <p>
-        A warm, people-first portrait of the team
-        and collaboration behind the brand.
-      </p>
-
-    </div>
-
-  </article>
-
-
-</div>
-
-  </section>
-
-
-
-  <!-- TELEVISION + DIGITAL EXPERIENCE -->
-
-  <section class="experience section dark" id="television">
-
-    <div class="experience-head">
-
-      <p class="eyebrow">
-        Television + Digital Experience
-      </p>
-
-      <h2>
-        Recognizable work.
-        <br>
-        <em>Across major platforms.</em>
-      </h2>
-
-      <p class="experience-intro">
-        Unscripted television, documentary, competition, food,
-        relationships and creator-led digital work across some
-        of the most recognizable brands in entertainment.
-      </p>
-
-    </div>
-
-
-
-    <!-- FLAGSHIP ROW -->
-
-    <div class="flagship-grid">
-
-
-      <!-- CBS / BIG BROTHER -->
-
-      <article class="flagship-credit">
-
-        <div class="network-row">
-
-          <img
-            class="network-mark cbs-mark"
-            src="assets/logos/cbs.png"
-            alt="CBS"
-          >
+        <div class="story-meta">
 
           <span>
-            Reality Competition
+            01 / 04
           </span>
-
-        </div>
-
-
-        <div class="flagship-show-logo">
-
-          <img
-            src="assets/logos/big-brother.png"
-            alt="Big Brother"
-          >
-
-        </div>
-
-
-        <div class="credit-footer">
 
           <div>
 
-            <strong>
-              Big Brother
-            </strong>
+            <h3>
+              SoundHaven Audio
+            </h3>
 
-            <span>
-              Producer
-            </span>
+            <p>
+              Product Film · Austin, Texas
+            </p>
 
           </div>
+
+
+         
 
         </div>
 
@@ -518,210 +313,45 @@
 
 
 
-      <!-- ABC / DANCING WITH THE STARS -->
+      <!-- METAL CHURCH -->
 
-      <article class="flagship-credit">
+      <article class="story">
 
-        <div class="network-row">
+        <img
+          src="assets/posters/metal-church.jpg"
+          alt="Metal Church television excerpt"
+        >
 
-          <img
-            class="network-mark abc-mark"
-            src="assets/logos/abc.png"
-            alt="ABC"
-          >
+        <div class="story-shade"></div>
+
+        <button
+    class="story-click-target video-trigger"
+    type="button"
+    data-video="pkG-U00eoBM"
+    data-title="Metal Church"
+    aria-label="Watch Metal Church"
+></button>
+
+        <div class="story-meta">
 
           <span>
-            Competition Entertainment
+            02 / 04
           </span>
-
-        </div>
-
-
-        <div class="flagship-show-logo dwts-show">
-
-          <img
-            src="assets/logos/dancing-with-the-stars.png"
-            alt="Dancing with the Stars"
-          >
-
-        </div>
-
-
-        <div class="credit-footer">
 
           <div>
 
-            <strong>
-              Dancing with the Stars
-            </strong>
+            <h3>
+              Metal Church
+            </h3>
 
-            <span>
-              Producer
-            </span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-
-    <!-- MAIN EXPERIENCE GRID -->
-
-    <div class="experience-grid">
-
-
-      <!-- NETFLIX / PERFECT MATCH -->
-
-      <article class="experience-card netflix-card">
-
-        <div class="network-row">
-
-          <img
-            class="platform-logo netflix-logo"
-            src="assets/logos/netflix.png"
-            alt="Netflix"
-          >
-
-          <span>
-            Streaming · Relationships
-          </span>
-
-        </div>
-
-
-        <div class="show-art perfect-match-logo">
-
-          <img
-            src="assets/logos/perfect-match.png"
-            alt="Perfect Match"
-          >
-
-        </div>
-
-
-        <div class="experience-meta">
-
-          <strong>
-            Perfect Match
-          </strong>
-
-          <span class="role">
-            Producer
-          </span>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- MAX / BBQ HIGH -->
-
-      <article class="experience-card bbq-card">
-
-        <div class="emmy-badge">
-          Emmy-nominated
-        </div>
-
-
-        <div class="network-row">
-
-          <img
-            class="platform-logo max-logo"
-            src="assets/logos/hbo-max.png"
-            alt="Max"
-          >
-
-          <span>
-            Food · Competition
-          </span>
-
-        </div>
-
-
-        <div class="show-art bbq-logo">
-
-          <img
-            src="assets/logos/bbq-high.png"
-            alt="BBQ High"
-          >
-
-        </div>
-
-
-        <div class="experience-meta">
-
-          <strong>
-            BBQ High
-          </strong>
-
-          <span class="role">
-            Producer
-          </span>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- PEACOCK / MARRIED AT FIRST SIGHT -->
-
-      <article class="experience-card mafs-card">
-
-        <div class="network-row">
-
-          <div class="peacock-mark">
-
-            <span>
-              peacock
-            </span>
-
-            <div class="peacock-dots">
-
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-              <i></i>
-
-            </div>
+            <p>
+              Television · Documentary Craft
+            </p>
 
           </div>
 
 
-          <span class="experience-genre">
-            Relationships · Ensemble
-          </span>
-
-        </div>
-
-
-        <div class="show-art mafs-logo">
-
-          <img
-            src="assets/logos/married-at-first-sight.png"
-            alt="Married at First Sight"
-          >
-
-        </div>
-
-
-        <div class="experience-meta">
-
-          <strong>
-            Married at First Sight
-          </strong>
-
-          <span class="role">
-            Producer
-          </span>
+         
 
         </div>
 
@@ -729,44 +359,45 @@
 
 
 
-      <!-- TLC / MY 600-LB LIFE -->
+      <!-- DTX GOLF -->
 
-      <article class="experience-card tlc-card">
+      <article class="story">
 
-        <div class="network-row">
+        <img
+          src="assets/posters/dtx-golf.jpg"
+          alt="DTX Golf tournament film"
+        >
 
-          <img
-            class="platform-logo tlc-logo"
-            src="assets/logos/tlc.png"
-            alt="TLC"
-          >
+        <div class="story-shade"></div>
+
+        <button
+  class="story-click-target video-trigger"
+  type="button"
+  data-video="QzWBAIY3KHU"
+  data-title="DTX Golf"
+  aria-label="Watch DTX Golf"
+></button>
+
+        <div class="story-meta">
 
           <span>
-            Documentary · Vérité
+            03 / 04
           </span>
 
-        </div>
+          <div>
+
+            <h3>
+              DTX Golf
+            </h3>
+
+            <p>
+              Event Film · Dallas, Texas
+            </p>
+
+          </div>
 
 
-        <div class="show-art life-logo">
-
-          <img
-            src="assets/logos/my-600lb-life.png"
-            alt="My 600-lb Life"
-          >
-
-        </div>
-
-
-        <div class="experience-meta">
-
-          <strong>
-            My 600-lb Life
-          </strong>
-
-          <span class="role">
-            Producer
-          </span>
+        
 
         </div>
 
@@ -774,113 +405,107 @@
 
 
 
-      <!-- YOUTUBE / CODIE SANCHEZ -->
+      <!-- STEELEABLE MOMENTS -->
 
-      <article class="experience-card digital-card">
+      <article class="story">
 
-        <div class="network-row">
+        <img
+          src="assets/posters/steeleable.jpg"
+          alt="Steeleable Moments brand film"
+        >
 
-          <img
-            class="platform-logo youtube-logo"
-            src="assets/logos/youtube.png"
-            alt="YouTube"
-          >
+        <div class="story-shade"></div>
+
+        <button
+  class="story-click-target video-trigger"
+  type="button"
+  data-video="cwYPithgf-0"
+  data-title="Steeleable Moments"
+  aria-label="Watch Steeleable Moments"
+></button>
+
+        <div class="story-meta">
 
           <span>
-            Creator-led Digital
+            04 / 04
           </span>
 
+          <div>
+
+            <h3>
+              Steeleable Moments
+            </h3>
+
+            <p>
+              Brand Film · Client Story
+            </p>
+
+          </div>
+
+
+         
+
         </div>
 
+      </article>
 
-        <div class="show-art codie-logo">
-
-          <img
-            src="assets/logos/codie-sanchez.png"
-            alt="Codie Sanchez"
-          >
-
-        </div>
+    </section>
 
 
-        <div class="experience-meta">
+
+    <!-- FILM REEL -->
+
+    <section
+      class="reel-section"
+      id="reel"
+    >
+
+      <button
+        class="reel-poster video-trigger"
+        type="button"
+        data-video="3Ivg_2yOOL4"
+        data-title="Cyber Athlete Films Reel"
+      >
+
+        <img
+          src="https://img.youtube.com/vi/3Ivg_2yOOL4/maxresdefault.jpg"
+          alt="Cyber Athlete Films production reel"
+        >
+
+        <span class="reel-shade"></span>
+
+
+        <span class="reel-copy">
+
+          <small>
+            Film Reel
+          </small>
 
           <strong>
-            Codie Sanchez
+            Watch the Reel
           </strong>
 
-          <span class="role">
-            Producer
-          </span>
+          <i>
+            Play ↗
+          </i>
 
-        </div>
+        </span>
 
-      </article>
+      </button>
 
-
-
-      <!-- ADDITIONAL PLATFORMS -->
-
-      <article class="experience-card platform-range-card">
-
-        <p class="range-eyebrow">
-          Additional platform experience
-        </p>
-
-
-        <div class="range-logos">
-
-          <img
-            src="assets/logos/apple-tv-plus.png"
-            alt="Apple TV Plus"
-          >
-
-          <img
-            src="assets/logos/paramount-plus.png"
-            alt="Paramount Plus"
-          >
-
-          <img
-            src="assets/logos/discovery-plus.png"
-            alt="Discovery Plus"
-          >
-
-          <img
-            src="assets/logos/magnolia-network.png"
-            alt="Magnolia Network"
-          >
-
-        </div>
-
-      </article>
-
-
-    </div>
+    </section>
 
 
 
-    <div class="experience-close">
+  <!-- FROM NATIONAL TELEVISION -->
 
-      <span>
-        Competition · Documentary · Food · Relationships · Digital
-      </span>
-
-      <strong>
-        Produced across platforms, formats and audiences.
-      </strong>
-
-    </div>
-
-  </section>
-
-
-
- <!-- WHY CAF -->
-
-<section class="intro section intro-video" id="intro">
+<section
+  class="television-origin"
+  id="producer"
+>
 
   <video
-    class="intro-video-bg"
+    class="television-origin-video"
     autoplay
     muted
     loop
@@ -888,428 +513,541 @@
     preload="metadata"
     aria-hidden="true"
   >
-    <source src="assets/video/austin-skyline.mp4" type="video/mp4">
+
+    <source
+      src="assets/video/austin-skyline.mp4"
+      type="video/mp4"
+    >
+
   </video>
 
-  <div class="intro-video-overlay"></div>
 
-  <div class="intro-content">
+  <div
+    class="television-origin-shade"
+    aria-hidden="true"
+  ></div>
 
-    <div class="section-label">
-      Why CAF
-    </div>
 
-    <div class="intro-grid">
+  <div class="television-origin-content">
 
-      <h2>
-        National experience.
-        <br>
-        Local commitment.
-      </h2>
+    <div class="chapter-label light-label">
 
-      <div>
-        <p>
-          After years traveling the country telling stories
-          for major television productions, Eddie brought
-          that experience home to Central Texas.
-        </p>
+      <span>
+        002
+      </span>
 
-        <p>
-          Cyber Athlete Films gives businesses, founders,
-          athletes and organizations access to thoughtful,
-          television-level storytelling without hiring a giant agency.
-        </p>
-
-        <p>
-          The crew can stay small. The story doesn't have to.
-        </p>
-      </div>
+      <span>
+        From National Television
+      </span>
 
     </div>
 
-  </div>
 
-</section>
+    <div class="television-origin-copy">
 
-
-<!-- BEHIND THE STORY -->
-
-<section class="story-collage" id="story">
-
-  <div class="story-grid" aria-hidden="true">
-
-    <!-- TOP ROW -->
-
-    <div class="story-photo story-dwts">
-      <img
-        src="assets/images/E1F4F514-E86A-4B02-AC2C-6EFB068AE599_1_201_a.jpeg"
-        alt=""
-      >
-    </div>
-
-    <div class="story-photo story-night">
-      <img
-        src="assets/images/3B379C34-2A42-4445-B1AE-8B0004745AD1_1_105_c.jpeg"
-        alt=""
-      >
-    </div>
-
-
-    <!-- MIDDLE ROW -->
-
-    <div class="story-photo story-nyle">
-      <img
-        src="assets/images/3F2B9FF4-9768-4370-AF6F-F3367502549F_1_102_a.jpeg"
-        alt=""
-      >
-    </div>
-
-    <div class="story-photo story-jamaica">
-      <img
-        src="assets/images/901689E4-883B-42D6-9976-89DABC38514F_1_105_c.jpeg"
-        alt=""
-      >
-    </div>
-
-    <div class="story-photo story-village">
-      <img
-        src="assets/images/527CFA10-C615-4E52-84CA-F165DBC57DC6_1_105_c.jpeg"
-        alt=""
-      >
-    </div>
-
-
-    <!-- BOTTOM ROW -->
-
-    <div class="story-photo story-ladies">
-      <img
-        src="assets/images/A66159A9-B084-40E2-BA00-5878ECFADB6F_1_201_a.jpeg"
-        alt=""
-      >
-    </div>
-
-    <div class="story-photo story-monster">
-      <img
-        src="assets/images/8E760B1F-B5AC-451D-9B05-2D1C4A416217.jpeg"
-        alt=""
-      >
-    </div>
-
-    <div class="story-photo story-horses">
-      <img
-        src="assets/images/7D67F1FD-560F-4FAB-BA8C-57B1A9ED3056_1_105_c.jpeg"
-        alt=""
-      >
-    </div>
-
-  </div>
-
-
-  <div class="story-shade"></div>
-
-
-  <div class="story-copy">
-
-    <p class="eyebrow">
-      Behind the Story
-    </p>
-
-    <h2>
-      Built for<br>
-      the field.
-    </h2>
-
-    <p class="story-environments">
-      Competition stages. Shops. Homes. Studios.
-      Back roads. Night shoots.
-    </p>
-
-    <p class="story-message">
-      Different environments, same job:
-      find the story, earn trust, and make the moment count.
-    </p>
-
-  </div>
-
-</section>
-
-
-  <!-- ABOUT -->
-
-  <section class="about section" id="about">
-
-    <div class="about-panel">
-
-      <p class="eyebrow">
-        About CAF
-      </p>
-
-
-      <h2>
-        Not a giant agency.
-        <br>
-        A filmmaker you can actually call.
-      </h2>
-
-
-      <div class="about-columns">
-
-        <p>
-          Cyber Athlete Films is led by producer and filmmaker
-          Eddie Vu, based in the Austin area. His background
-          spans national unscripted television, documentary
-          production and commercial storytelling.
-        </p>
-
-
-        <p>
-          CAF brings that experience to projects of every scale:
-          understanding the story, making people comfortable
-          on camera and building something that looks great
-          without losing what made it real.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
- <!-- CONTACT -->
-
-<section class="contact-cinematic" id="contact">
-
-  <div class="contact-cinematic-bg" aria-hidden="true"></div>
-  <div class="contact-cinematic-shade" aria-hidden="true"></div>
-
-  <div class="contact-cinematic-inner">
-
-    <div class="contact-cinematic-copy">
-
-      <p class="eyebrow">
-        Start a project
+      <p class="kicker">
+        Eddie Vu · Producer / Director
       </p>
 
       <h2>
-        Every project
+        Network experience.
         <br>
-        starts with
-        <br>
-        <em>a conversation.</em>
+        Central Texas roots.
       </h2>
 
       <p>
-        Tell me what you’re building, who it’s for and what you
-        want people to feel when they see it.
+        More than a decade producing stories for national
+        television—now bringing that same documentary instinct,
+        trust and field-tested storytelling home to Central Texas.
       </p>
 
       <a
-        class="contact-direct-email"
-        href="mailto:eddie@cyberathletefilms.com"
+        class="text-link"
+        href="#productions"
       >
-        eddie@cyberathletefilms.com
+        Selected Productions ↓
       </a>
 
     </div>
 
-
-    <form
-      class="contact-editorial-form"
-      action="https://formsubmit.co/eddie@cyberathletefilms.com"
-      method="POST"
-    >
-
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Cyber Athlete Films Website Inquiry"
-      >
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table"
-      >
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="true"
-      >
-
-      <input
-        type="text"
-        name="_honey"
-        tabindex="-1"
-        autocomplete="off"
-        class="contact-honeypot"
-      >
-
-
-      <label class="editorial-field">
-
-        <span>01 — Your name</span>
-
-        <input
-          type="text"
-          name="Name"
-          placeholder="Name"
-          autocomplete="name"
-          required
-        >
-
-      </label>
-
-
-      <label class="editorial-field">
-
-        <span>02 — Your email</span>
-
-        <input
-          type="email"
-          name="Email"
-          placeholder="Email address"
-          autocomplete="email"
-          required
-        >
-
-      </label>
-
-
-      <label class="editorial-field">
-
-        <span>03 — What are we making?</span>
-
-        <select name="Project Type" required>
-
-          <option value="" selected disabled>
-            Select a project type
-          </option>
-
-          <option value="Brand or business film">
-            Brand or business film
-          </option>
-
-          <option value="CAF Next Level athlete profile">
-            CAF Next Level athlete profile
-          </option>
-
-          <option value="Event coverage">
-            Event coverage
-          </option>
-
-          <option value="Television or production work">
-            Television or production work
-          </option>
-
-          <option value="Editing or post-production">
-            Editing or post-production
-          </option>
-
-          <option value="Something else">
-            Something else
-          </option>
-
-        </select>
-
-      </label>
-
-
-      <label class="editorial-field">
-
-        <span>04 — Tell me about it</span>
-
-        <textarea
-          name="Project Details"
-          rows="4"
-          placeholder="A few details about the story, timing and location..."
-          required
-        ></textarea>
-
-      </label>
-
-
-      <button
-        class="contact-submit"
-        type="submit"
-      >
-        <span>Send inquiry</span>
-        <span aria-hidden="true">↗</span>
-      </button>
-
-    </form>
-
   </div>
 
 </section>
 
 
-</main>
+    <!-- SELECTED PRODUCTIONS -->
+
+    <section
+      class="productions chapter"
+      id="productions"
+    >
+
+      <div class="chapter-label">
+
+        <span>
+          003
+        </span>
+
+        <span>
+          Selected Productions
+        </span>
+
+      </div>
+
+
+      <div class="production-index">
+
+
+        <div class="production-row">
+
+          <span>
+            01
+          </span>
+
+          <strong>
+            Big Brother
+          </strong>
+
+          <span>
+            CBS
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+
+        <div class="production-row">
+
+          <span>
+            02
+          </span>
+
+          <strong>
+            Dancing with the Stars
+          </strong>
+
+          <span>
+            ABC
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+
+        <div class="production-row">
+
+          <span>
+            03
+          </span>
+
+          <strong>
+            Perfect Match
+          </strong>
+
+          <span>
+            Netflix
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+
+        <div class="production-row">
+
+          <span>
+            04
+          </span>
+
+          <strong>
+            BBQ High
+          </strong>
+
+          <span>
+            Max
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+
+        <div class="production-row">
+
+          <span>
+            05
+          </span>
+
+          <strong>
+            Married at First Sight
+          </strong>
+
+          <span>
+            Peacock
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+
+        <div class="production-row">
+
+          <span>
+            06
+          </span>
+
+          <strong>
+            My 600-lb Life
+          </strong>
+
+          <span>
+            TLC
+          </span>
+
+          <span>
+            Producer
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
 
-<!-- SELECTED WORK VIDEO MODAL -->
+   <!-- NEXT LEVEL -->
 
-<div
-  class="modal video-modal"
-  aria-hidden="true"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Selected work video"
+<section
+  class="next-level"
+  id="next-level"
 >
 
-  <div class="modal-backdrop"></div>
+  <img
+    class="next-level-image"
+    src="assets/images/football.png"
+    alt="Football player walking through smoke toward the field"
+  >
 
-  <div class="modal-shell">
 
-    <p class="modal-eyebrow">
-      Selected Work
+  <div
+    class="next-level-shade"
+    aria-hidden="true"
+  ></div>
+
+
+  <div class="next-level-content">
+
+    <p class="kicker">
+      004 · A New Chapter
     </p>
 
-    <h2 class="modal-title"></h2>
+    <h2>
+      Next
+      <br>
+      Level
+    </h2>
+
+   <p>
+  For the dream chasers.
+</p>
+
+<span class="coming-soon">
+  Coming Soon
+</span>
+  </div>
+
+</section>
+
+
+    <!-- CONTACT -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div
+        class="contact-bg"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="contact-shade"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="contact-grid">
+
+
+        <div class="contact-copy">
+
+         <p class="kicker">
+  Start a Project
+</p>
+
+          <h2>
+            Let’s make something
+            <br>
+            worth watching.
+          </h2>
+
+          <a href="mailto:eddie@cyberathletefilms.com">
+            eddie@cyberathletefilms.com
+          </a>
+
+        </div>
+
+
+
+        <form
+  id="contact-form"
+  class="contact-form"
+  action="https://formsubmit.co/ajax/eddie@cyberathletefilms.com"
+  method="POST"
+>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Cyber Athlete Films Website Inquiry"
+          >
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+          <input
+  type="hidden"
+  name="_captcha"
+  value="false"
+>
+
+          <input
+            class="honeypot"
+            type="text"
+            name="_honey"
+            tabindex="-1"
+            autocomplete="off"
+          >
+
+
+          <label>
+
+            <span>
+              Your Name
+            </span>
+
+            <input
+              type="text"
+              name="Name"
+              autocomplete="name"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            <span>
+              Email Address
+            </span>
+
+            <input
+              type="email"
+              name="Email"
+              autocomplete="email"
+              required
+            >
+
+          </label>
+
+
+          <label>
+
+            <span>
+              What are you interested in?
+            </span>
+
+            <select
+              name="Project Type"
+              required
+            >
+
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Select a project type
+              </option>
+
+              <option value="Brand or business film">
+                Brand or business film
+              </option>
+
+              <option value="CAF Next Level athlete profile">
+                CAF Next Level athlete profile
+              </option>
+
+              <option value="Event coverage">
+                Event coverage
+              </option>
+
+              <option value="Television or production work">
+                Television or production work
+              </option>
+
+              <option value="Editing or post-production">
+                Editing or post-production
+              </option>
+
+              <option value="Something else">
+                Something else
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            <span>
+              Tell me about your project
+            </span>
+
+            <textarea
+              name="Project Details"
+              rows="4"
+              required
+            ></textarea>
+
+          </label>
+
+
+          <button type="submit">
+
+            <span>
+              Send Inquiry
+            </span>
+
+            <span aria-hidden="true">
+              →
+            </span>
+
+          </button>
+<p
+  class="form-status"
+  id="form-status"
+  aria-live="polite"
+></p>
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      Cyber Athlete Films
+    </span>
+
+    <span>
+      Field Notes · Austin, Texas
+    </span>
+
+    <span>
+      © <span id="year"></span>
+    </span>
+
+  </footer>
+
+
+
+  <!-- VIDEO MODAL -->
+
+  <div
+    class="video-modal"
+    aria-hidden="true"
+    data-modal
+  >
 
     <button
-      class="modal-close"
+      class="modal-backdrop"
       type="button"
       aria-label="Close video"
+      data-modal-close
+    ></button>
+
+
+    <div
+      class="modal-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Video player"
     >
-      Close ×
-    </button>
 
-    <div class="modal-video-frame">
+      <div class="modal-topline">
 
-      <iframe
-        class="modal-youtube"
-        src=""
-        title="Selected work video"
-        allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-        allowfullscreen
-      ></iframe>
+        <span data-modal-title>
+          Film
+        </span>
+
+        <button
+          type="button"
+          data-modal-close
+        >
+          Close ×
+        </button>
+
+      </div>
+
+
+      <div class="modal-frame">
+
+        <iframe
+          src=""
+          title="Cyber Athlete Films video"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          allowfullscreen
+          data-modal-frame
+        ></iframe>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
 
 
-
-<footer>
-
-  <span>
-    © <span id="year"></span> Cyber Athlete Films
-  </span>
-
-  <span>
-    Network experience. Central Texas roots.
-  </span>
-
-</footer>
-
-
-<script src="assets/site.js"></script>
+  <script src="assets/site.js"></script>
 
 </body>
+
 </html>
