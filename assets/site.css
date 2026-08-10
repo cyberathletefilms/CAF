@@ -1197,54 +1197,48 @@ footer {
 ========================================================= */
 
 .field-section {
-  position: relative;
-
   padding:
-    clamp(6rem, 11vw, 11rem)
+    clamp(6rem, 10vw, 10rem)
     var(--gutter)
-    clamp(7rem, 12vw, 12rem);
+    clamp(7rem, 11vw, 11rem);
 
   background: var(--ink);
   color: var(--paper);
 }
 
 
-/* =========================================================
-   INTRO
-========================================================= */
-
-.field-section > .chapter-label {
-  margin-bottom: clamp(4rem, 7vw, 7rem);
+.field-section .chapter-label {
+  margin-bottom: clamp(3rem, 5vw, 5rem);
 }
 
+
+/* INTRO */
 
 .field-heading {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.45fr)
-    minmax(260px, 0.55fr);
+    minmax(0, 1.3fr)
+    minmax(260px, 0.7fr);
 
-  gap: clamp(3rem, 8vw, 9rem);
+  gap: clamp(3rem, 7vw, 8rem);
 
   align-items: end;
 
-  margin-bottom: clamp(4rem, 7vw, 7rem);
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
 }
 
 
 .field-heading h2 {
   margin: 0;
 
-  max-width: 8ch;
-
   font-family: "Barlow Condensed", sans-serif;
 
-  font-size: clamp(4.5rem, 9vw, 9rem);
+  font-size: clamp(4.5rem, 8vw, 8rem);
 
   font-weight: 600;
 
-  line-height: 0.82;
+  line-height: 0.84;
 
   letter-spacing: -0.045em;
 
@@ -1252,400 +1246,110 @@ footer {
 }
 
 
-.field-heading-copy {
-  max-width: 31rem;
+.field-heading p {
+  max-width: 30rem;
 
-  margin:
-    0
-    0
-    0.4rem;
+  margin: 0 0 0.4rem;
 
   color: rgba(243, 240, 232, 0.62);
 
-  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
 
-  line-height: 1.75;
+  line-height: 1.7;
 }
-
 
 
 /* =========================================================
-   SHARED PHOTO ROWS
+   ACTUAL PHOTO GRID
 ========================================================= */
 
-.field-row {
+.field-grid {
   display: grid;
 
-  gap: clamp(0.8rem, 1.5vw, 1.4rem);
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
 
-  margin-bottom: clamp(0.8rem, 1.5vw, 1.4rem);
+  gap: clamp(0.6rem, 1vw, 1rem);
 }
 
 
-.field-card {
-  min-width: 0;
+/*
+   TOP ROW — TWO PHOTOS
+*/
 
-  margin: 0;
+.field-photo:nth-child(1),
+.field-photo:nth-child(2) {
+  grid-column: span 3;
 }
 
 
-.field-image-wrap {
+/*
+   MIDDLE ROW — THREE PHOTOS
+*/
+
+.field-photo:nth-child(3),
+.field-photo:nth-child(4),
+.field-photo:nth-child(5) {
+  grid-column: span 2;
+}
+
+
+/*
+   BOTTOM ROW — THREE PHOTOS
+*/
+
+.field-photo:nth-child(6),
+.field-photo:nth-child(7),
+.field-photo:nth-child(8) {
+  grid-column: span 2;
+}
+
+
+/* PHOTO BOX */
+
+.field-photo {
   position: relative;
-
-  width: 100%;
-  height: 100%;
 
   overflow: hidden;
 
-  background: #161616;
+  aspect-ratio: 16 / 10;
+
+  background: #151515;
 }
 
 
-.field-card img {
+.field-photo img {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
-  filter:
-    saturate(0.88)
-    contrast(1.04)
-    brightness(0.94);
+  object-position: center;
+
+  display: block;
 
   transition:
-    transform 700ms cubic-bezier(.2,.7,.2,1),
-    filter 500ms ease;
+    transform 600ms ease;
 }
 
 
-.field-card:hover img {
+.field-photo:hover img {
   transform: scale(1.025);
-
-  filter:
-    saturate(1)
-    contrast(1.03)
-    brightness(1);
 }
 
 
+/* NYLE — FLIP IMAGE, NOTHING ELSE */
 
-/* =========================================================
-   ROW ONE
-   DWTS IS THE DOMINANT IMAGE
-========================================================= */
-
-.field-row-one {
-  grid-template-columns:
-    minmax(0, 1.18fr)
-    minmax(0, 0.82fr);
-
-  align-items: stretch;
-}
-
-
-.field-row-one .field-card {
-  display: grid;
-
-  grid-template-rows:
-    minmax(0, 1fr)
-    auto;
-}
-
-
-.field-dwts .field-image-wrap {
-  aspect-ratio: 16 / 9;
-}
-
-
-.field-night .field-image-wrap {
-  aspect-ratio: 4 / 3;
-}
-
-
-
-/* =========================================================
-   ROW TWO
-   NYLE GETS MORE WIDTH
-========================================================= */
-
-.field-row-two {
-  grid-template-columns:
-    minmax(0, 1.18fr)
-    minmax(0, 0.8fr)
-    minmax(0, 1.02fr);
-
-  align-items: stretch;
-}
-
-
-.field-row-two .field-card {
-  display: grid;
-
-  grid-template-rows:
-    minmax(0, 1fr)
-    auto;
-}
-
-
-.field-row-two .field-image-wrap {
-  aspect-ratio: 4 / 3;
-}
-
-
-/*
-   Reverse the Nyle image.
-
-   This keeps Eddie visible in the composition while
-   preserving the full original file — no Photoshop
-   or duplicate image required.
-*/
-
-.field-nyle img {
+.field-photo-nyle img {
   transform: scaleX(-1);
 }
 
 
-.field-nyle:hover img {
+.field-photo-nyle:hover img {
   transform:
     scaleX(-1)
     scale(1.025);
 }
-
-
-
-/* =========================================================
-   ROW THREE
-========================================================= */
-
-.field-row-three {
-  grid-template-columns:
-    minmax(0, 0.9fr)
-    minmax(0, 0.78fr)
-    minmax(0, 1.32fr);
-
-  align-items: stretch;
-}
-
-
-.field-row-three .field-card {
-  display: grid;
-
-  grid-template-rows:
-    minmax(0, 1fr)
-    auto;
-}
-
-
-.field-row-three .field-image-wrap {
-  aspect-ratio: 4 / 3;
-}
-
-
-/*
-   Give the horse image more breathing room.
-*/
-
-.field-horses .field-image-wrap {
-  aspect-ratio: 16 / 10;
-}
-
-
-
-/* =========================================================
-   INDIVIDUAL CROPS
-========================================================= */
-
-/*
-   Keep Eddie in frame on DWTS.
-*/
-
-.field-dwts img {
-  object-position: center center;
-}
-
-
-/*
-   Night shoot:
-   favor the active production area.
-*/
-
-.field-night img {
-  object-position: center center;
-}
-
-
-/*
-   Nyle:
-   slightly tighter crop after reversal.
-*/
-
-.field-nyle img {
-  object-position: center center;
-}
-
-
-/*
-   Restaurant:
-   protect the directing action.
-*/
-
-.field-restaurant img {
-  object-position: center center;
-}
-
-
-/*
-   Video village:
-   prioritize Eddie + EP + monitors.
-*/
-
-.field-village img {
-  object-position: center center;
-}
-
-
-/*
-   Industrial:
-   retain Eddie and the camera setup.
-*/
-
-.field-industrial img {
-  object-position: center center;
-}
-
-
-/*
-   Panama:
-   retain Eddie and production environment.
-*/
-
-.field-panama img {
-  object-position: center center;
-}
-
-
-/*
-   Horses:
-   hold the wide composition.
-*/
-
-.field-horses img {
-  object-position: center center;
-}
-
-
-
-/* =========================================================
-   CAPTIONS
-========================================================= */
-
-.field-card figcaption {
-  display: grid;
-
-  grid-template-columns:
-    auto
-    1fr;
-
-  gap: 1rem;
-
-  align-items: start;
-
-  padding:
-    0.9rem
-    0
-    1.2rem;
-
-  border-top:
-    1px solid
-    rgba(243, 240, 232, 0.18);
-}
-
-
-.field-number {
-  color: var(--accent);
-
-  font-family: "Barlow Condensed", sans-serif;
-
-  font-size: 0.85rem;
-
-  line-height: 1;
-
-  letter-spacing: 0.08em;
-}
-
-
-.field-card figcaption div {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 0.25rem;
-}
-
-
-.field-card figcaption strong {
-  color: var(--paper);
-
-  font-family: "Barlow Condensed", sans-serif;
-
-  font-size: 0.85rem;
-
-  font-weight: 500;
-
-  letter-spacing: 0.1em;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-}
-
-
-.field-card figcaption div span {
-  color: rgba(243, 240, 232, 0.48);
-
-  font-size: 0.58rem;
-
-  letter-spacing: 0.14em;
-
-  line-height: 1.3;
-
-  text-transform: uppercase;
-}
-
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-  .field-heading {
-    grid-template-columns:
-      minmax(0, 1.2fr)
-      minmax(220px, 0.8fr);
-
-    gap: 3rem;
-  }
-
-
-  .field-row-two {
-    grid-template-columns:
-      1.15fr
-      0.85fr
-      1fr;
-  }
-
-
-  .field-row-three {
-    grid-template-columns:
-      1fr
-      0.85fr
-      1.15fr;
-  }
-
-}
-
 
 
 /* =========================================================
@@ -1654,68 +1358,32 @@ footer {
 
 @media (max-width: 760px) {
 
-  .field-section {
-    padding-top: 5rem;
-    padding-bottom: 6rem;
-  }
-
-
-  .field-section > .chapter-label {
-    margin-bottom: 3.5rem;
-  }
-
-
   .field-heading {
     display: block;
-
-    margin-bottom: 4rem;
   }
 
 
   .field-heading h2 {
-    max-width: none;
-
     margin-bottom: 2rem;
 
-    font-size:
-      clamp(4rem, 18vw, 6.5rem);
+    font-size: clamp(4rem, 17vw, 6rem);
   }
 
 
-  .field-heading-copy {
-    max-width: 30rem;
+  .field-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0.5rem;
   }
 
 
-  /*
-     Mobile becomes one clean vertical editorial feed.
-  */
-
-  .field-row-one,
-  .field-row-two,
-  .field-row-three {
-    grid-template-columns: 1fr;
-
-    gap: 0;
+  .field-photo:nth-child(n) {
+    grid-column: span 1;
   }
 
 
-  .field-dwts .field-image-wrap,
-  .field-night .field-image-wrap,
-  .field-row-two .field-image-wrap,
-  .field-row-three .field-image-wrap,
-  .field-horses .field-image-wrap {
+  .field-photo {
     aspect-ratio: 4 / 3;
-  }
-
-
-  .field-card {
-    margin-bottom: 1.25rem;
-  }
-
-
-  .field-card figcaption {
-    padding-bottom: 1.5rem;
   }
 
 }
