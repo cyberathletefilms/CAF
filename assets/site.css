@@ -956,7 +956,9 @@ video {
 
   top: clamp(6rem, 10vw, 10rem);
   left: var(--gutter);
-  right: var(--gutter);
+
+  /* Shortens the Chapter 005 line before the football player */
+  right: 42%;
 }
 
 
