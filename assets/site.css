@@ -1484,3 +1484,12 @@ footer {
   }
 
 }
+
+/* Brighten Industrial / Monster Garage photo only */
+
+.field-photo-6 img {
+  filter:
+    brightness(1.35)
+    saturate(0.95)
+    contrast(0.95);
+}
